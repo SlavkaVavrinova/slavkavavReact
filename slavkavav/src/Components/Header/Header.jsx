@@ -21,6 +21,12 @@ const Header = () => {
         </ul>
       </div>
       <div className="banner">
+        <div className="banner__text">
+          <h1 className="banner__title">Slávka Vavřinová</h1>
+          <p>
+            ZAČÍNAJÍCÍ WEBOVÁ VÝVOJÁŘKA <br />A STUDENTKA UX
+          </p>
+        </div>
         <img className="banner__img" src={slavka} alt=" Slávka Vavřinová" />
       </div>
     </>

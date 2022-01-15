@@ -1,29 +1,9 @@
-.banner {
-  position: relative;
-}
-.banner__text {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: left;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 0 2em;
-}
-.banner__title {
-  margin-top: 0;
-}
-.banner__img {
-  width: 100%;
-  max-width: 100%;
-}
-
 .page {
   width: 100vw;
   background: white;
   line-height: 1.5;
   font-size: 75%;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   position: relative;
 }
 
@@ -290,22 +270,21 @@ footer {
   }
 
   .contact__address div,
-.contact__address a {
+  .contact__address a {
     width: 35%;
   }
 
   .contact__phoneEmail a,
-.contact__socialNetworks a,
-.contact__address div,
-.contact__address a {
+  .contact__socialNetworks a,
+  .contact__address div,
+  .contact__address a {
     padding: 0;
   }
 
   .contact__phoneEmail,
-.contact__address {
+  .contact__address {
     padding-left: 30px;
   }
-
   .contact__phoneEmail a {
     width: 35%;
   }
@@ -329,7 +308,6 @@ footer {
   .container {
     flex-direction: row;
   }
-
   .contact__socialNetworks {
     justify-content: space-between;
   }
@@ -351,7 +329,7 @@ footer {
   }
 
   .languages,
-.aboutMe {
+  .aboutMe {
     padding-left: 0.5rem;
   }
 
@@ -363,7 +341,6 @@ footer {
     padding-left: 0;
     margin-bottom: 3rem;
   }
-
   .education {
     padding-left: 0;
   }
@@ -372,10 +349,12 @@ footer {
     width: 100%;
   }
 }
+
 @page {
   size: A4;
   margin: 0;
 }
+
 @media print {
   .page {
     width: 21cm;
@@ -406,6 +385,7 @@ footer {
   }
 
   /*prit A4 form mobile*/
+
   h1 {
     position: static;
     width: 100%;
@@ -427,22 +407,21 @@ footer {
   }
 
   .contact__address div,
-.contact__address a {
+  .contact__address a {
     width: 35%;
   }
 
   .contact__phoneEmail a,
-.contact__socialNetworks a,
-.contact__address div,
-.contact__address a {
+  .contact__socialNetworks a,
+  .contact__address div,
+  .contact__address a {
     padding: 0;
   }
 
   .contact__phoneEmail,
-.contact__address {
+  .contact__address {
     padding-left: 30px;
   }
-
   .contact__phoneEmail a {
     width: 35%;
   }
@@ -466,7 +445,6 @@ footer {
   .container {
     flex-direction: row;
   }
-
   .contact__socialNetworks {
     justify-content: space-between;
   }
@@ -488,7 +466,7 @@ footer {
   }
 
   .languages,
-.aboutMe {
+  .aboutMe {
     padding-left: 0.5rem;
   }
 
@@ -500,76 +478,7 @@ footer {
     padding-left: 0;
     margin-bottom: 0;
   }
-
   .education {
     padding-left: 0;
   }
 }
-.navigation {
-  display: flex;
-  justify-content: space-between;
-  width: 100vw;
-  height: 150px;
-}
-.navigation__logo {
-  cursor: pointer;
-  padding: 20px;
-}
-.navigation__hamburger {
-  width: 50px;
-  position: relative;
-  height: 37px;
-  right: 20px;
-  top: 0;
-  cursor: pointer;
-  align-self: center;
-}
-.navigation__rows {
-  background: #000000;
-  background-size: 100% 7px;
-  background-position: left top;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 7px;
-  display: block;
-  top: 15px;
-  left: 0;
-  position: absolute;
-  transition: all 500ms;
-  cursor: pointer;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
-}
-.navigation__rows::before {
-  background: #000000;
-  position: absolute;
-  left: 0;
-  content: "";
-  top: -15px;
-  left: 0;
-  width: 100%;
-  height: 7px;
-  transition: all 500ms;
-  cursor: pointer;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
-}
-.navigation__rows::after {
-  background: #000000;
-  position: absolute;
-  left: 0;
-  content: "";
-  bottom: -15px;
-  left: 0;
-  width: 100%;
-  height: 7px;
-  transition: all 500ms;
-  cursor: pointer;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
-}
-.navigation__web {
-  display: none;
-}
-
-.banner__img {
-  width: 100vw;
-  max-width: 100%;
-}/*# sourceMappingURL=App.css.map */
