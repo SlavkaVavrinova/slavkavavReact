@@ -41,7 +41,7 @@
   box-shadow: 5px 5px 5px -2px #582c3e;
 }
 
-h1 {
+.cv__title {
   position: absolute;
   text-align: center;
   margin: 0;
@@ -241,18 +241,6 @@ a:focus {
   margin-bottom: 3rem;
 }
 
-footer {
-  width: 100vw;
-  background-color: #582c3e;
-  color: #ffffff;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 0.5rem;
-  display: flex;
-  justify-content: center;
-}
-
 .copyright {
   height: 1rem;
   padding-right: 1em;
@@ -269,7 +257,7 @@ footer {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
 
-  h1 {
+  .cv__title {
     position: static;
     width: 100%;
   }
@@ -367,10 +355,6 @@ footer {
   .education {
     padding-left: 0;
   }
-
-  footer {
-    width: 100%;
-  }
 }
 @page {
   size: A4;
@@ -391,10 +375,6 @@ footer {
     page-break-after: always;
   }
 
-  footer {
-    display: none;
-  }
-
   .important {
     border: 0.5px solid #582c3e;
     box-shadow: 5px 5px 5px -2px #582c3e;
@@ -406,7 +386,7 @@ footer {
   }
 
   /*prit A4 form mobile*/
-  h1 {
+  .cv__title {
     position: static;
     width: 100%;
   }
@@ -505,6 +485,61 @@ footer {
     padding-left: 0;
   }
 }
+.item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.item__img {
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+  .instagram__mobile {
+    display: none;
+  }
+}
+.instagram__tablet {
+  display: none;
+}
+@media (min-width: 480px) {
+  .instagram__tablet {
+    display: inline-block;
+  }
+}
+@media (min-width: 768px) {
+  .instagram__tablet {
+    display: none;
+  }
+}
+.instagram__web {
+  display: none;
+}
+@media (min-width: 768px) {
+  .instagram__web {
+    display: inline-block;
+  }
+}
+
+.instagram-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+@media (min-width: 480px) {
+  .instagram-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .instagram-gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.instagram-image {
+  width: 100%;
+}
+
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -564,9 +599,6 @@ footer {
   transition: all 500ms;
   cursor: pointer;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
-}
-.navigation__web {
-  display: none;
 }
 
 .banner__img {

@@ -1,4 +1,16 @@
 import slavka from './img/stanislavaVavrinova.jpg';
+import phone from './img/phone.svg';
+import email from './img/email.svg';
+import address from './img/address.svg';
+import web from './img/web.svg';
+import linkedin from './img/linkedin.svg';
+import instagram from './img/instagram.svg';
+import czechitas from './img/logoCzechitas.svg';
+import github from './img/github.svg';
+import coursera from './img/coursera.svg';
+import google from './img/google.svg';
+import udemy from './img/udemy-logo.png';
+import wesbos from './img/wesbos.png';
 
 const Cv = () => {
   return (
@@ -7,28 +19,27 @@ const Cv = () => {
         <div className="cv__hero">
           <img class="foto" src={slavka} alt="Stanislava Vavřinová" />
           <div class="hero__rightSide">
-            <h1>Stanislava Vavřinová</h1>
+            <h1 className="cv__title">Stanislava Vavřinová</h1>
 
             <ul class="contact">
               <li class="contact__phoneEmail">
                 <a href="tel:+420775959988">
-                  <img src="src/phone.svg" alt="Ikona telefon" />
+                  <img src={phone} alt="Ikona telefon" />
                   +420 775 959 988
                 </a>
                 <a href="malito:vavrinovas@gmail.com">
-                  <img src="src/email.svg" alt="Ikona email" />
+                  <img src={email} alt="Ikona email" />
                   vavrinovas@gmail.com
                 </a>
               </li>
 
               <li class="contact__address">
                 <div>
-                  <img src="src/address.svg" alt="Ikona adresy" /> České
-                  Budějovice
+                  <img src={address} alt="Ikona adresy" /> České Budějovices
                 </div>
 
                 <a href="https://slavkavav.cz/">
-                  <img src="src/web.svg" alt="Logo web" />
+                  <img src={web} alt="Logo web" />
                   https://slavkavav.cz/
                 </a>
               </li>
@@ -40,7 +51,7 @@ const Cv = () => {
                 >
                   <img
                     class="logoSocialNetworks"
-                    src="src/linkedin.svg"
+                    src={linkedin}
                     alt="Logo LinkedIn"
                   />
                   Stanislava Vavřinová
@@ -51,7 +62,7 @@ const Cv = () => {
                 >
                   <img
                     class="logoSocialNetworks"
-                    src="src/instagram.svg"
+                    src={instagram}
                     alt="Logo Instagram"
                   />
                   slavkavavrinova
@@ -59,7 +70,7 @@ const Cv = () => {
                 <a href="https://github.com/SlavkaVavrinova" target="_blanc">
                   <img
                     class="logoSocialNetworks"
-                    src="src/github.svg"
+                    src={github}
                     alt="Logo GitHub"
                   />
                   SlavkaVavrinova
@@ -74,21 +85,21 @@ const Cv = () => {
                   <li>HTML/CSS</li>
                   <li>JavaScript</li>
                   <li>React, Next.js</li>
-                  <li>PHP</li>
+                  <li>PHP (okrajově)</li>
                   <li>UX Design</li>
                   <li>WordPress</li>
-                  <li>Bootstrap</li>
-                  <li>Canva, Photoshop</li>
+                  <li>Bootstrap, SASS</li>
+                  <li>Adobe XD, Figma, Canva, Photoshop</li>
                 </ul>
               </section>
               <section class="important__portfolio">
                 <h2>Portfolio</h2>
                 <ul>
                   <li>
-                    <a href="https://appkahyposka.cz" target="_blanc">
-                      https://appkahyposka.cz
+                    <a href="https://slavkavav.cz" target="_blanc">
+                      https://slavkavav.cz
                     </a>
-                    React
+                    Next.js
                   </li>
                   <li>
                     <a href="https://budejcanda.cz" target="_blanc">
@@ -100,19 +111,26 @@ const Cv = () => {
                     <a href="https://gerta.cz" target="_blanc">
                       https://gerta.cz
                     </a>
-                    ???
+                    Eleventy
                   </li>
+                  <li>
+                    <a href="https://appkahyposka.cz" target="_blanc">
+                      https://appkahyposka.cz
+                    </a>
+                    React
+                  </li>
+
                   <li>
                     <a href="https://chatagerta.cz" target="_blanc">
                       https://chatagerta.cz
                     </a>
-                    ???
+                    WP
                   </li>
                   <li>
                     <a href="https://chataruzenka.cz" target="_blanc">
                       https://chataruzenka.cz
                     </a>
-                    ???
+                    WP
                   </li>
                   <li>
                     <a href="https://statekchlumecek.cz" target="_blanc">
@@ -143,7 +161,7 @@ const Cv = () => {
                 <h2>Kurzy</h2>
                 <img
                   class="logoCzechitas"
-                  src="src/logoCzechitas.svg"
+                  src={czechitas}
                   alt="Logo Czechitas"
                 />
                 <ul>
@@ -160,26 +178,25 @@ const Cv = () => {
                 <div class="google">
                   <img
                     class="logoCoursera"
-                    src="src/coursera.svg"
+                    src={coursera}
                     alt="Logo Coursera"
                   />
-                  <img
-                    class="logoGoogle"
-                    src="src/google.svg"
-                    alt="Logo Google"
-                  />
+                  <img class="logoGoogle" src={google} alt="Logo Google" />
                 </div>
                 <ul>
                   <li>UX Design Professional Certificate</li>
                 </ul>
 
-                <img
-                  class="logoUdemy"
-                  src="src/udemy-logo.png"
-                  alt="Logo Udemy"
-                />
+                {/* <img class="logoUdemy" src={udemy} alt="Logo Udemy" />
                 <ul>
                   <li>Complete React Developer 2021</li>
+                </ul> */}
+                <img class="logoUdemy" src={wesbos} alt="Logo Wes Bos" />
+                <ul>
+                  <li>Beginner JavaScript</li>
+                  <li>ES6 for Everyone</li>
+                  <li>React For Beginners</li>
+                  <li>Začínám: Advanced React and GraphQL</li>
                 </ul>
               </section>
             </div>
@@ -187,6 +204,16 @@ const Cv = () => {
             <div class="container__rightSide">
               <section class="work">
                 <h2>Pracovní zkušenosti</h2>
+                <h3>Živnostenské oprávnění | 2021 - současnost</h3>
+                <ul>
+                  <li>
+                    {' '}
+                    <strong>Czechitas</strong> - kouč HTML/CSS, Figma, React
+                  </li>
+                  <li>Tvorba webu</li>
+                </ul>
+                <p></p>
+                <p></p>
                 <h3>Rodičovská pauza | 2017 – současnost</h3>
                 <ul>
                   <li>
@@ -238,9 +265,9 @@ const Cv = () => {
               <section class="languages">
                 <h2>Jazykové znalosti</h2>
                 <ul>
-                  <li>Anglický jazyk středně pokročilá</li>
-                  <li>Německý jazyk středně pokročilá</li>
-                  <li>Francouzský jazyk pasivně</li>
+                  <li>Anglický jazyk</li>
+                  <li>Německý jazyk</li>
+                  <li>Francouzský jazyk velice pasivně</li>
                 </ul>
               </section>
             </div>

@@ -21,7 +21,7 @@
   box-shadow: 5px 5px 5px -2px #582c3e;
 }
 
-h1 {
+.cv__title {
   position: absolute;
   text-align: center;
   margin: 0;
@@ -221,18 +221,6 @@ a:focus {
   margin-bottom: 3rem;
 }
 
-footer {
-  width: 100vw;
-  background-color: #582c3e;
-  color: #ffffff;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 0.5rem;
-  display: flex;
-  justify-content: center;
-}
-
 .copyright {
   height: 1rem;
   padding-right: 1em;
@@ -249,7 +237,7 @@ footer {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
 
-  h1 {
+  .cv__title {
     position: static;
     width: 100%;
   }
@@ -344,10 +332,6 @@ footer {
   .education {
     padding-left: 0;
   }
-
-  footer {
-    width: 100%;
-  }
 }
 
 @page {
@@ -370,10 +354,6 @@ footer {
     page-break-after: always;
   }
 
-  footer {
-    display: none;
-  }
-
   .important {
     border: 0.5px solid #582c3e;
     box-shadow: 5px 5px 5px -2px #582c3e;
@@ -386,7 +366,7 @@ footer {
 
   /*prit A4 form mobile*/
 
-  h1 {
+  .cv__title {
     position: static;
     width: 100%;
   }
