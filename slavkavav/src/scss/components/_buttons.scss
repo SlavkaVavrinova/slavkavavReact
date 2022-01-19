@@ -1,0 +1,54 @@
+@use '../base/colors';
+@use '../base/root';
+@use '../base/mixins';
+
+.button {
+  text-transform: uppercase;
+  background-color: colors.$primaryLight;
+  border: none;
+  color: colors.$primary;
+  font-weight: 600;
+
+  padding: 0.7rem 1.4rem;
+  box-shadow: 3px 3px 5px colors.$primary;
+  cursor: pointer;
+
+  &:active {
+    box-shadow: 1px 1px 3px colors.$primary;
+    transform: translate(2px, 2px);
+  }
+
+  &__link {
+    color: colors.$dark;
+    text-decoration: none;
+    font-weight: 600;
+
+    &--secondary {
+      color: colors.$secondary;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    &--form {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.button--secondary {
+  background-color: transparent;
+  color: colors.$secondary;
+  border: 1px solid colors.$secondary;
+}
+
+.section__buttons {
+  display: flex;
+  justify-content: space-between;
+  &--one {
+    justify-content: flex-end;
+  }
+}
+
+.button--right {
+  text-align: end;
+}

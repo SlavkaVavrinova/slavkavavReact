@@ -42,23 +42,28 @@ const Header = () => {
 
         {isMenuOpened ? (
           <>
-            <ul ref={mobileMenuRef} className="navigation__web">
-              <li>
+            <ul ref={mobileMenuRef} className="navigation-open">
+              <li className="navigation__item">
                 <Link to="/" onClick={openMenu}>
                   PORTFOLIO
                 </Link>
               </li>
-              <li>
+              <li className="navigation__item">
                 <Link to="/omne" onClick={openMenu}>
                   O MNĚ
                 </Link>
               </li>
-              <li>
+              <li className="navigation__item">
+                <Link to="/zivotopis" onClick={openMenu}>
+                  CV
+                </Link>
+              </li>
+              <li className="navigation__item">
                 <Link to="/koucovani" onClick={openMenu}>
                   KOUČOVÁNÍ
                 </Link>
               </li>
-              <li>
+              <li className="navigation__item">
                 <Link to="/kontakt" onClick={openMenu}>
                   KONTAKT
                 </Link>

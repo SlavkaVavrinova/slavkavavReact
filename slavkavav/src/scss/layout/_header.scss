@@ -1,3 +1,7 @@
+@use '../base/colors';
+@use '../base/root';
+@use '../base/mixins';
+
 .banner {
   position: relative;
 
@@ -5,14 +9,16 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    text-align: left;
+    text-align: center;
     background-color: rgba(0, 0, 0, 0.7);
-    color: white;
+
+    color: colors.$light;
     padding: 0 2em;
+    font-size: 80%;
   }
 
   &__title {
-    margin-top: 0;
+    margin: 0;
   }
 
   &__img {

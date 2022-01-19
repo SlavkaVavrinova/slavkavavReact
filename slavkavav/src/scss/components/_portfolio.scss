@@ -1,8 +1,19 @@
+@use '../base/colors';
+@use '../base/root';
+@use '../base/mixins';
+
 .item {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  margin: 32px;
+  @include mixins.tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 
   &__img {
     width: 100%;
+    @include mixins.tablet {
+      width: 100%;
+    }
   }
 }

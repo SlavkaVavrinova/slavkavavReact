@@ -1,87 +1,62 @@
+@use 'base/colors';
+@use 'base/root';
+@use 'base/mixins';
+
 @use 'layout/header';
+@use 'layout/nav';
 @use 'components/cv';
 @use 'components/portfolio';
 @use 'components/instagram';
+@use 'components/buttons';
 
-.navigation {
-  display: flex;
-  justify-content: space-between;
-  width: 100vw;
-  height: 150px;
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Montserrat:wght@100;400;600&display=swap');
 
-  &__logo {
-    cursor: pointer;
-    padding: 20px;
+html {
+  box-sizing: border-box;
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: root.$font-default;
+  font-size: 16px;
+  background-color: colors.$light;
+  color: colors.$dark;
+  line-height: 1.8;
+  margin: 0;
+  position: relative;
+}
+
+h1,
+h2,
+h3 {
+  font-family: root.$font-default;
+  color: colors.$primary;
+}
+
+h1 {
+  text-align: center;
+  color: colors.$primaryLight;
+}
+
+h2 {
+  text-align: center;
+}
+
+.main {
+  padding: root.$spacer/2;
+
+  @include mixins.tablet {
+    padding: root.$spacer;
   }
 
-  &__hamburger {
-    width: 50px;
-    position: relative;
-    height: 37px;
-    right: 20px;
-    top: 0;
-    cursor: pointer;
-    align-self: center;
-  }
-
-  &__rows {
-    background: #000000;
-    background-size: 100% 7px;
-    background-position: left top;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 7px;
-    display: block;
-    top: 15px;
-    left: 0;
-    position: absolute;
-    -webkit-transition: all 500ms;
-    -moz-transition: all 500ms;
-    -o-transition: all 500ms;
-    transition: all 500ms;
-    cursor: pointer;
-    -webkit-box-shadow: 0 0 3px rgb(0 0 0 / 75%);
-    -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
-    box-shadow: 0 0 3px rgb(0 0 0 / 75%);
-
-    &::before {
-      background: #000000;
-      position: absolute;
-      left: 0;
-      content: '';
-      top: -15px;
-      left: 0;
-      width: 100%;
-      height: 7px;
-      -webkit-transition: all 500ms;
-      -moz-transition: all 500ms;
-      -o-transition: all 500ms;
-      transition: all 500ms;
-      cursor: pointer;
-      -webkit-box-shadow: 0 0 3px rgb(0 0 0 / 75%);
-      -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
-      box-shadow: 0 0 3px rgb(0 0 0 / 75%);
-    }
-
-    &::after {
-      background: #000000;
-
-      position: absolute;
-      left: 0;
-      content: '';
-      bottom: -15px;
-      left: 0;
-      width: 100%;
-      height: 7px;
-      -webkit-transition: all 500ms;
-      -moz-transition: all 500ms;
-      -o-transition: all 500ms;
-      transition: all 500ms;
-      cursor: pointer;
-      -webkit-box-shadow: 0 0 3px rgb(0 0 0 / 75%);
-      -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
-      box-shadow: 0 0 3px rgb(0 0 0 / 75%);
-    }
+  @include mixins.large {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

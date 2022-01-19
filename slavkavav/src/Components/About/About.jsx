@@ -1,10 +1,6 @@
-import Cv from './Cv/Cv';
-
-
-
 const Home = () => {
   return (
-    <>
+    <div className="main">
       <p>Chci tvořit weby, tak se učím, jak to dělat dobře.</p>
 
       <p>Co už umím:</p>
@@ -29,9 +25,7 @@ const Home = () => {
         </li>
         <li>Responzivní web design.</li>
       </ul>
-
-      <Cv />
-    </>
+    </div>
   );
 };
 

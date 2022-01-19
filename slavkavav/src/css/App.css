@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Montserrat:wght@100;400;600&display=swap");
 .banner {
   position: relative;
 }
@@ -5,17 +6,101 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  text-align: left;
+  text-align: center;
   background-color: rgba(0, 0, 0, 0.7);
-  color: white;
+  color: #fffafc;
   padding: 0 2em;
+  font-size: 80%;
 }
 .banner__title {
-  margin-top: 0;
+  margin: 0;
 }
 .banner__img {
   width: 100%;
   max-width: 100%;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 150px;
+}
+.navigation__logo {
+  cursor: pointer;
+  padding: 20px;
+}
+.navigation__hamburger {
+  width: 50px;
+  position: relative;
+  height: 37px;
+  right: 20px;
+  top: 0;
+  cursor: pointer;
+  align-self: center;
+}
+.navigation__rows {
+  background: #000000;
+  background-size: 100% 7px;
+  background-position: left top;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 7px;
+  display: block;
+  top: 15px;
+  left: 0;
+  position: absolute;
+  transition: all 500ms;
+  cursor: pointer;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
+}
+.navigation__rows::before {
+  background: #000000;
+  position: absolute;
+  left: 0;
+  content: "";
+  top: -15px;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  transition: all 500ms;
+  cursor: pointer;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
+}
+.navigation__rows::after {
+  background: #000000;
+  position: absolute;
+  left: 0;
+  content: "";
+  bottom: -15px;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  transition: all 500ms;
+  cursor: pointer;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
+}
+.navigation-open {
+  position: absolute;
+  top: 130px;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
+  background-color: #0a0507;
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.navigation-open a {
+  color: #fffafc;
+  text-decoration: none;
+  height: 100%;
+  display: block;
+  padding: 1rem 0;
+}
+.navigation__item {
+  height: 3rem;
 }
 
 .page {
@@ -486,11 +571,22 @@ a:focus {
   }
 }
 .item {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  margin: 32px;
+}
+@media screen and (min-width: 700px) {
+  .item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 .item__img {
   width: 100%;
+}
+@media screen and (min-width: 700px) {
+  .item__img {
+    width: 100%;
+  }
 }
 
 @media (min-width: 480px) {
@@ -540,65 +636,103 @@ a:focus {
   width: 100%;
 }
 
-.navigation {
+.button {
+  text-transform: uppercase;
+  background-color: #dfc7d0;
+  border: none;
+  color: #582c3e;
+  font-weight: 600;
+  padding: 0.7rem 1.4rem;
+  box-shadow: 3px 3px 5px #582c3e;
+  cursor: pointer;
+}
+.button:active {
+  box-shadow: 1px 1px 3px #582c3e;
+  transform: translate(2px, 2px);
+}
+.button__link {
+  color: #0a0507;
+  text-decoration: none;
+  font-weight: 600;
+}
+.button__link--secondary {
+  color: #fcdc4d;
+  text-decoration: none;
+  font-weight: 600;
+}
+.button__link--form {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button--secondary {
+  background-color: transparent;
+  color: #fcdc4d;
+  border: 1px solid #fcdc4d;
+}
+
+.section__buttons {
   display: flex;
   justify-content: space-between;
-  width: 100vw;
-  height: 150px;
 }
-.navigation__logo {
-  cursor: pointer;
-  padding: 20px;
+.section__buttons--one {
+  justify-content: flex-end;
 }
-.navigation__hamburger {
-  width: 50px;
+
+.button--right {
+  text-align: end;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Montserrat", "Roboto", sans-serif;
+  font-size: 16px;
+  background-color: #fffafc;
+  color: #0a0507;
+  line-height: 1.8;
+  margin: 0;
   position: relative;
-  height: 37px;
-  right: 20px;
-  top: 0;
-  cursor: pointer;
-  align-self: center;
 }
-.navigation__rows {
-  background: #000000;
-  background-size: 100% 7px;
-  background-position: left top;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 7px;
-  display: block;
-  top: 15px;
-  left: 0;
-  position: absolute;
-  transition: all 500ms;
-  cursor: pointer;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", "Roboto", sans-serif;
+  color: #582c3e;
 }
-.navigation__rows::before {
-  background: #000000;
-  position: absolute;
-  left: 0;
-  content: "";
-  top: -15px;
-  left: 0;
-  width: 100%;
-  height: 7px;
-  transition: all 500ms;
-  cursor: pointer;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
+
+h1 {
+  text-align: center;
+  color: #dfc7d0;
 }
-.navigation__rows::after {
-  background: #000000;
-  position: absolute;
-  left: 0;
-  content: "";
-  bottom: -15px;
-  left: 0;
-  width: 100%;
-  height: 7px;
-  transition: all 500ms;
-  cursor: pointer;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
+
+h2 {
+  text-align: center;
+}
+
+.main {
+  padding: 16px;
+}
+@media screen and (min-width: 700px) {
+  .main {
+    padding: 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .banner__img {
