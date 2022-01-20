@@ -33,17 +33,27 @@ body {
 h1,
 h2,
 h3 {
-  font-family: root.$font-default;
   color: colors.$primary;
 }
 
 h1 {
   text-align: center;
   color: colors.$primaryLight;
+  font-family: root.$font-special;
+  font-size: 400%;
+  font-weight: 200;
 }
 
 h2 {
   text-align: center;
+  font-size: 300%;
+  font-family: root.$font-special;
+  font-weight: 200;
+}
+
+h3 {
+  font-size: 200%;
+  font-weight: 400;
 }
 
 .main {
@@ -65,4 +75,8 @@ h2 {
     width: 100vw;
     max-width: 100%;
   }
+}
+
+.bold {
+  font-weight: 600;
 }

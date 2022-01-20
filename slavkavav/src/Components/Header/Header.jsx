@@ -45,12 +45,12 @@ const Header = () => {
             <ul ref={mobileMenuRef} className="navigation-open">
               <li className="navigation__item">
                 <Link to="/" onClick={openMenu}>
-                  PORTFOLIO
+                  DOMŮ
                 </Link>
               </li>
               <li className="navigation__item">
-                <Link to="/omne" onClick={openMenu}>
-                  O MNĚ
+                <Link to="/portfolio" onClick={openMenu}>
+                  PORTFOLIO
                 </Link>
               </li>
               <li className="navigation__item">

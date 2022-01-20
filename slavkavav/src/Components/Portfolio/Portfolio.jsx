@@ -13,7 +13,7 @@ const Portfolio = () => (
       <div className="item" key={web.id}>
         <img className="item__img" src={web.img} alt={web.alt} />
         <div>
-          <p>{web.id}</p>
+          <p className="bold">{web.id}</p>
           <h3>{web.name}</h3>
           <p>{web.info}</p>
           <button className="button">Prohlédnout</button>
@@ -26,35 +26,35 @@ const Portfolio = () => (
 const webs = [
   {
     id: '06',
-    img: { budejcanda },
+    img: `${budejcanda}`,
     alt: 'Web Budějčanda',
     name: 'Budějčanda',
     info: 'Frontendová část webu',
   },
   {
     id: '05',
-    img: { gerta },
+    img: `${gerta}`,
     alt: 'Web Pension Gerta',
     name: 'Pension Gerta',
     info: 'Web se šablonou Eleventy',
   },
   {
     id: '04',
-    img: { appkaHyposka },
+    img: `${appkaHyposka}`,
     alt: 'Web Appka Hypoška',
     name: 'Appka Hypoška',
     info: 'Závěrečný projekt Digitální akademie',
   },
   {
     id: '03',
-    img: { statek },
+    img: `${statek}`,
     alt: 'Web Statek Chlumeček',
     name: 'Statek Chlumeček',
     info: 'WordPress',
   },
   {
     id: '02',
-    img: { chataRuzenka },
+    img: `${chataRuzenka}`,
     alt: 'Web Chata Růženka',
     name: 'Chata Růženka',
     info: 'WordPress',
@@ -62,7 +62,7 @@ const webs = [
 
   {
     id: '01',
-    img: { chataGerta },
+    img: `${chataGerta}`,
     alt: 'Web Chata Gerta',
     name: 'Chata Gerta',
     info: 'WordPress',

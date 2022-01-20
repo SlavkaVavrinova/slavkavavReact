@@ -4,7 +4,7 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom';
 
 import Header from './Components/Header/Header';
 import Portfolio from './Components/Portfolio/Portfolio';
-import About from './Components/About/About';
+import Home from './Components/Home/Home';
 import Coaching from './Components/Coaching/Coaching';
 import Contact from './Components/Contact/Contact';
 import Instagram from './Components/Instagram/Instagram';
@@ -16,8 +16,8 @@ const App = () => {
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/" element={<Portfolio />} />
-          <Route path="/omne" element={<About />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/zivotopis" element={<Cv />} />
           <Route path="/koucovani" element={<Coaching />} />
           <Route path="/kontakt" element={<Contact />} />
