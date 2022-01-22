@@ -1,3 +1,7 @@
+@use '../base/colors';
+@use '../base/root';
+@use '../base/mixins';
+
 .page {
   width: 100vw;
   background: white;
@@ -5,6 +9,7 @@
   font-size: 75%;
   font-family: 'Montserrat', sans-serif;
   position: relative;
+  margin-bottom: root.$spacer;
 }
 
 .cv__hero {
@@ -23,6 +28,8 @@
 
 .cv__title {
   position: absolute;
+  font-family: root.$font-default;
+  font-size: 250%;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -33,15 +40,22 @@
   top: 0;
 }
 
-h2 {
+.cv__h2 {
+  font-family: root.$font-default;
+  font-size: 150%;
+  font-weight: bold;
   margin: 0;
   padding: 0.5rem 0;
   color: #582c3e;
   font-style: italic;
+  text-align: left;
 }
 
-h3 {
+.cv__h3 {
   margin: 0.5em 0;
+  font-size: 125%;
+  color: colors.$dark;
+  font-weight: bold;
 }
 
 ul {
@@ -208,10 +222,6 @@ a:focus {
   padding-bottom: 0;
 }
 
-.csob {
-  margin-top: 1rem;
-}
-
 .work {
   padding-left: 0.5rem;
 }
@@ -231,7 +241,7 @@ a:focus {
     width: 21cm;
     min-height: 29.7cm;
     padding: 1cm;
-    margin: 0 auto;
+    margin: root.$spacer auto;
     border: 1px #d3d3d3 solid;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);

@@ -14,12 +14,12 @@ import wesbos from './img/wesbos.png';
 
 const Cv = () => {
   return (
-    <>
+    <div className="main">
       <div class="page">
         <div className="cv__hero">
           <img class="foto" src={slavka} alt="Stanislava Vavřinová" />
           <div class="hero__rightSide">
-            <h1 className="cv__title">Stanislava Vavřinová</h1>
+            <h1 className="cv__title">Ing. Stanislava Vavřinová</h1>
 
             <ul class="contact">
               <li class="contact__phoneEmail">
@@ -80,7 +80,7 @@ const Cv = () => {
 
             <div class="important">
               <section class="important__it">
-                <h2>IT znalost</h2>
+                <h2 className="cv__h2">IT znalost</h2>
                 <ul>
                   <li>HTML/CSS</li>
                   <li>JavaScript</li>
@@ -93,7 +93,7 @@ const Cv = () => {
                 </ul>
               </section>
               <section class="important__portfolio">
-                <h2>Portfolio</h2>
+                <h2 className="cv__h2">Portfolio</h2>
                 <ul>
                   <li>
                     <a href="https://slavkavav.cz" target="_blanc">
@@ -148,7 +148,7 @@ const Cv = () => {
           <div class="container">
             <div class="container__leftSide">
               <section class="aboutMe">
-                <h2>O mně</h2>
+                <h2 className="cv__h2">O mně</h2>
                 <p>
                   S webem jsem pracovala na amatérské úrovni, ale mateřská
                   dovolená v kombinaci s lockdownem to změnila. Volný čas jsem
@@ -158,7 +158,7 @@ const Cv = () => {
               </section>
 
               <section class="courses">
-                <h2>Kurzy</h2>
+                <h2 className="cv__h2">Kurzy</h2>
                 <img
                   class="logoCzechitas"
                   src={czechitas}
@@ -203,8 +203,10 @@ const Cv = () => {
 
             <div class="container__rightSide">
               <section class="work">
-                <h2>Pracovní zkušenosti</h2>
-                <h3>Živnostenské oprávnění | 2021 - současnost</h3>
+                <h2 className="cv__h2">Pracovní zkušenosti</h2>
+                <h3 className="cv__h3">
+                  Živnostenské oprávnění | 2021 - současnost
+                </h3>
                 <ul>
                   <li>
                     {' '}
@@ -214,7 +216,7 @@ const Cv = () => {
                 </ul>
                 <p></p>
                 <p></p>
-                <h3>Rodičovská pauza | 2017 – současnost</h3>
+                <h3 className="cv__h3">Rodičovská pauza | 2017 – současnost</h3>
                 <ul>
                   <li>
                     Penzion Gerta Český Krumlov, výpomoc v rodinném penzionu,
@@ -226,7 +228,7 @@ const Cv = () => {
                   </li>
                 </ul>
 
-                <h3 class="csob">
+                <h3 className="cv__h3">
                   Československá obchodní banka, a.s. | 2008 - 2017
                 </h3>
                 <p>České Budějovice – Hroznová, úvěrový specialista</p>
@@ -250,8 +252,10 @@ const Cv = () => {
               </section>
 
               <section class="education">
-                <h2>Vzdělání</h2>
-                <h3>Jihočeská univerzita, Ekonomická fakulta | 2005 - 2010</h3>
+                <h2 className="cv__h2">Vzdělání</h2>
+                <h3 className="cv__h3">
+                  Jihočeská univerzita, Ekonomická fakulta | 2005 - 2010
+                </h3>
                 <ul>
                   <li>Studijní program Ekonomika a management, titul Ing.</li>
                   <li>Obor Obchodní podnikání</li>
@@ -263,7 +267,7 @@ const Cv = () => {
           <div class="container">
             <div class="container__leftSide">
               <section class="languages">
-                <h2>Jazykové znalosti</h2>
+                <h2 className="cv__h2">Jazykové znalosti</h2>
                 <ul>
                   <li>Anglický jazyk</li>
                   <li>Německý jazyk</li>
@@ -273,7 +277,7 @@ const Cv = () => {
             </div>
             <div class="container__rightSide">
               <section class="other">
-                <h2>Ostatní</h2>
+                <h2 className="cv__h2">Ostatní</h2>
                 <ul>
                   <li>
                     znalost Microsoft Word, Excel, PowerPoint, FrontPage,
@@ -290,7 +294,10 @@ const Cv = () => {
           </div>
         </div>
       </div>
-    </>
+      <div className="button__cv">
+        <button className="button ">VYTISKNOUT ŽIVOTOPIS</button>
+      </div>
+    </div>
   );
 };
 

@@ -41,37 +41,56 @@ const Header = () => {
         </span>
 
         {isMenuOpened ? (
-          <>
-            <ul ref={mobileMenuRef} className="navigation-open">
-              <li className="navigation__item">
-                <Link to="/" onClick={openMenu}>
-                  DOMŮ
-                </Link>
-              </li>
-              <li className="navigation__item">
-                <Link to="/portfolio" onClick={openMenu}>
-                  PORTFOLIO
-                </Link>
-              </li>
-              <li className="navigation__item">
-                <Link to="/zivotopis" onClick={openMenu}>
-                  CV
-                </Link>
-              </li>
-              <li className="navigation__item">
-                <Link to="/koucovani" onClick={openMenu}>
-                  KOUČOVÁNÍ
-                </Link>
-              </li>
-              <li className="navigation__item">
-                <Link to="/kontakt" onClick={openMenu}>
-                  KONTAKT
-                </Link>
-              </li>
-            </ul>
-          </>
+          <ul ref={mobileMenuRef} className="navigation-open">
+            <li className="navigation__item">
+              <Link to="/" onClick={openMenu}>
+                DOMŮ
+              </Link>
+            </li>
+            <li className="navigation__item">
+              <Link to="/portfolio" onClick={openMenu}>
+                PORTFOLIO
+              </Link>
+            </li>
+            <li className="navigation__item">
+              <Link to="/zivotopis" onClick={openMenu}>
+                CV
+              </Link>
+            </li>
+            <li className="navigation__item">
+              <Link to="/koucovani" onClick={openMenu}>
+                KOUČOVÁNÍ
+              </Link>
+            </li>
+            <li className="navigation__item">
+              <Link to="/kontakt" onClick={openMenu}>
+                KONTAKT
+              </Link>
+            </li>
+          </ul>
         ) : null}
+
+        <ul className="navigation__large">
+          <li className="navigation__item">
+            <Link to="/">DOMŮ</Link>
+          </li>
+          <li className="navigation__item">
+            <Link to="/portfolio">PORTFOLIO</Link>
+          </li>
+          <li className="navigation__item">
+            <Link to="/zivotopis">CV</Link>
+          </li>
+          <li className="navigation__item">
+            <Link to="/koucovani">KOUČOVÁNÍ</Link>
+          </li>
+          <li className="navigation__item">
+            <Link to="/kontakt" o>
+              KONTAKT
+            </Link>
+          </li>
+        </ul>
       </div>
+
       <div className="banner">
         <div className="banner__text">
           <h1 className="banner__title">Slávka Vavřinová</h1>

@@ -1,0 +1,55 @@
+@use '../base/colors';
+@use '../base/root';
+@use '../base/mixins';
+
+.skills {
+  &__grid {
+    @include mixins.special(500px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      gap: root.$spacer/2;
+    }
+
+    @include mixins.tablet {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @include mixins.large {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  &__item {
+    background-image: url(../../Components/Skills/img/kolo.svg);
+    background-position: top center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: root.$spacer;
+    margin: root.$spacer/2 0;
+
+    @include mixins.special(500) {
+      background-size: auto 90%;
+    }
+  }
+
+  &__icon {
+    height: 3rem;
+
+    @include mixins.special(500) {
+      margin-top: root.$spacer * 2;
+      height: 4rem;
+    }
+  }
+
+  &__title {
+    font-size: 125%;
+    margin-bottom: 0;
+    margin-top: 0;
+
+    @include mixins.special(500) {
+      margin-bottom: root.$spacer * 2;
+    }
+  }
+}

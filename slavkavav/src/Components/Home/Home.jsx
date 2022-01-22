@@ -1,9 +1,11 @@
+import Skills from '../Skills/Skills';
+
 const Home = () => {
   return (
     <div className="main">
       <p>Chci tvořit weby, tak se učím, jak to dělat dobře.</p>
 
-      <p>Co už umím:</p>
+      <h2>Co už umím:</h2>
 
       <ul>
         <li>
@@ -25,6 +27,8 @@ const Home = () => {
         </li>
         <li>Responzivní web design.</li>
       </ul>
+
+      <Skills />
     </div>
   );
 };

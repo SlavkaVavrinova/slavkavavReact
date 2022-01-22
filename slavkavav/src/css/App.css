@@ -39,6 +39,11 @@
   cursor: pointer;
   align-self: center;
 }
+@media screen and (min-width: 700px) {
+  .navigation__hamburger {
+    display: none;
+  }
+}
 .navigation__rows {
   background: #000000;
   background-size: 100% 7px;
@@ -102,6 +107,30 @@
 .navigation__item {
   height: 3rem;
 }
+@media screen and (min-width: 700px) {
+  .navigation__item {
+    color: #0a0507;
+  }
+}
+
+.navigation__large {
+  display: none;
+}
+@media screen and (min-width: 700px) {
+  .navigation__large {
+    display: flex;
+    text-align: center;
+    list-style-type: none;
+    text-decoration: none;
+    align-items: center;
+  }
+  .navigation__large a {
+    text-decoration: none;
+    height: 100%;
+    display: block;
+    padding: 16px;
+  }
+}
 
 .page {
   width: 100vw;
@@ -110,6 +139,7 @@
   font-size: 75%;
   font-family: "Montserrat", sans-serif;
   position: relative;
+  margin-bottom: 32px;
 }
 
 .cv__hero {
@@ -128,6 +158,8 @@
 
 .cv__title {
   position: absolute;
+  font-family: "Montserrat", "Roboto", sans-serif;
+  font-size: 250%;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -138,15 +170,22 @@
   top: 0;
 }
 
-h2 {
+.cv__h2 {
+  font-family: "Montserrat", "Roboto", sans-serif;
+  font-size: 150%;
+  font-weight: bold;
   margin: 0;
   padding: 0.5rem 0;
   color: #582c3e;
   font-style: italic;
+  text-align: left;
 }
 
-h3 {
+.cv__h3 {
   margin: 0.5em 0;
+  font-size: 125%;
+  color: #0a0507;
+  font-weight: bold;
 }
 
 ul {
@@ -313,10 +352,6 @@ a:focus {
   padding-bottom: 0;
 }
 
-.csob {
-  margin-top: 1rem;
-}
-
 .work {
   padding-left: 0.5rem;
 }
@@ -336,7 +371,7 @@ a:focus {
     width: 21cm;
     min-height: 29.7cm;
     padding: 1cm;
-    margin: 0 auto;
+    margin: 32px auto;
     border: 1px #d3d3d3 solid;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -636,6 +671,58 @@ a:focus {
   width: 100%;
 }
 
+@media screen and (min-width: 500px) {
+  .skills__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 16px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .skills__grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .skills__grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+.skills__item {
+  background-image: url(../../Components/Skills/img/kolo.svg);
+  background-position: top center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 32px;
+  margin: 16px 0;
+}
+@media screen and (min-width: 500) {
+  .skills__item {
+    background-size: auto 90%;
+  }
+}
+.skills__icon {
+  height: 3rem;
+}
+@media screen and (min-width: 500) {
+  .skills__icon {
+    margin-top: 64px;
+    height: 4rem;
+  }
+}
+.skills__title {
+  font-size: 125%;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+@media screen and (min-width: 500) {
+  .skills__title {
+    margin-bottom: 64px;
+  }
+}
+
 .button {
   text-transform: uppercase;
   background-color: #dfc7d0;
@@ -663,6 +750,9 @@ a:focus {
 .button__link--form {
   margin-left: auto;
   margin-right: auto;
+}
+.button__cv {
+  text-align: center;
 }
 
 .button--secondary {
@@ -706,17 +796,27 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Montserrat", "Roboto", sans-serif;
   color: #582c3e;
 }
 
 h1 {
   text-align: center;
   color: #dfc7d0;
+  font-family: "Grand Hotel", cursive;
+  font-size: 400%;
+  font-weight: 200;
 }
 
 h2 {
   text-align: center;
+  font-size: 300%;
+  font-family: "Grand Hotel", cursive;
+  font-weight: 200;
+}
+
+h3 {
+  font-size: 200%;
+  font-weight: 400;
 }
 
 .main {
@@ -738,4 +838,8 @@ h2 {
 .banner__img {
   width: 100vw;
   max-width: 100%;
+}
+
+.bold {
+  font-weight: 600;
 }/*# sourceMappingURL=App.css.map */
