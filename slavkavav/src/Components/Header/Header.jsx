@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 import logo from './../../logo.svg';
-import slavka from './img/slavkaWeb.jpg';
 
 const Header = () => {
   const [isMenuOpened, setisMenuOpened] = useState(false);
@@ -54,7 +53,7 @@ const Header = () => {
             </li>
             <li className="navigation__item">
               <Link to="/zivotopis" onClick={openMenu}>
-                CV
+                ŽIVOTOPIS
               </Link>
             </li>
             <li className="navigation__item">
@@ -78,7 +77,7 @@ const Header = () => {
             <Link to="/portfolio">PORTFOLIO</Link>
           </li>
           <li className="navigation__item">
-            <Link to="/zivotopis">CV</Link>
+            <Link to="/zivotopis">ŽIVOTOPIS</Link>
           </li>
           <li className="navigation__item">
             <Link to="/koucovani">KOUČOVÁNÍ</Link>
@@ -90,7 +89,6 @@ const Header = () => {
           </li>
         </ul>
       </div>
-
       <div className="banner">
         <div className="banner__text">
           <h1 className="banner__title">Slávka Vavřinová</h1>
@@ -98,8 +96,9 @@ const Header = () => {
             ZAČÍNAJÍCÍ WEBOVÁ VÝVOJÁŘKA <br />A STUDENTKA UX
           </p>
         </div>
-        <img className="banner__img" src={slavka} alt=" Slávka Vavřinová" />
-      </div>
+        <div className="box"></div>
+        {/* <img className="banner__img" src={slavka} alt=" Slávka Vavřinová" />*/}
+      </div>{' '}
     </>
   );
 };

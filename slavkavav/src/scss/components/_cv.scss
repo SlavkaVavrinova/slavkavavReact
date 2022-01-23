@@ -58,29 +58,28 @@
   font-weight: bold;
 }
 
-ul {
+.cv__list {
   list-style-type: square;
   margin: 0.5em 0 0 0;
   padding-top: 0;
 }
 
-p {
+.noMargin {
   margin: 0;
 }
-
-a {
+.cv__link {
   color: #582c3e;
   cursor: pointer;
 }
 
-a:hover {
+.cv__link:hover {
   background-color: #582c3e;
   color: #ffffff;
   border-radius: 5px;
 }
 
-a:active,
-a:focus {
+.cv__link:active,
+.cv__link:focus {
   background-color: #dfc7d0;
   color: #582c3e;
   border-radius: 5px;

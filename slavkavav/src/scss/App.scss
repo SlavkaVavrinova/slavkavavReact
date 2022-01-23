@@ -8,6 +8,7 @@
 @use 'components/portfolio';
 @use 'components/instagram';
 @use 'components/skills';
+@use 'components/contact';
 @use 'components/buttons';
 
 @import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Montserrat:wght@100;400;600&display=swap');
@@ -29,6 +30,8 @@ body {
   line-height: 1.8;
   margin: 0;
   position: relative;
+  max-width: 1320px !important;
+  margin: 0 auto;
 }
 
 h1,

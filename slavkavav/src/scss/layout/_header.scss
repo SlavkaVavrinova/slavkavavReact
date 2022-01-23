@@ -26,3 +26,21 @@
     max-width: 100%;
   }
 }
+
+.box {
+  height: 300px;
+  background-image: url(../../Components/Header/img/slavkaWeb.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include mixins.special(500px) {
+    height: 400px;
+  }
+  @include mixins.tablet {
+  }
+
+  @include mixins.large {
+    height: 500px;
+  }
+}

@@ -1,0 +1,84 @@
+@use '../base/colors';
+@use '../base/root';
+@use '../base/mixins';
+
+.required {
+  color: colors.$error;
+}
+
+.form {
+  width: 100%;
+
+  @include mixins.special(900px) {
+    max-width: 600px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+  }
+  &__field {
+    margin-bottom: root.$spacer/2;
+  }
+
+  &__label {
+    font-size: root.$small;
+    color: colors.$dark;
+  }
+
+  &__input {
+    width: 100%;
+    outline: 0;
+    border: 1px solid colors.$dark;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+
+    &:focus,
+    &:active {
+      border: 2px solid colors.$primary;
+      border-left: 5px solid colors.$primary;
+      outline: 0;
+    }
+  }
+  &__legend {
+    font-size: root.$small;
+    color: colors.$dark;
+  }
+
+  &__textarea {
+    width: 100%;
+    border: 1px solid colors.$dark;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+
+    &:focus,
+    &:active {
+      border: 2px solid colors.$primary;
+      border-left: 5px solid colors.$primary;
+      outline: 0;
+    }
+  }
+}
+
+.email__valid,
+.input__valid {
+  border: 2px solid colors.$success;
+  border-left: 5px solid colors.$success;
+}
+
+.email__invalid,
+.input__invalid {
+  border: 2px solid colors.$error;
+  border-left: 5px solid colors.$error;
+}
+
+.error-message {
+  color: colors.$error;
+  text-align: center;
+  font-weight: 600;
+}
+
+.form-message {
+  font-size: root.$large;
+  color: colors.$formMessage;
+}

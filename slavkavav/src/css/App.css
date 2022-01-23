@@ -20,10 +20,28 @@
   max-width: 100%;
 }
 
+.box {
+  height: 300px;
+  background-image: url(../../Components/Header/img/slavkaWeb.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 500px) {
+  .box {
+    height: 400px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .box {
+    height: 500px;
+  }
+}
+
 .navigation {
   display: flex;
   justify-content: space-between;
-  width: 100vw;
+  width: 100%;
   height: 150px;
 }
 .navigation__logo {
@@ -188,29 +206,29 @@
   font-weight: bold;
 }
 
-ul {
+.cv__list {
   list-style-type: square;
   margin: 0.5em 0 0 0;
   padding-top: 0;
 }
 
-p {
+.noMargin {
   margin: 0;
 }
 
-a {
+.cv__link {
   color: #582c3e;
   cursor: pointer;
 }
 
-a:hover {
+.cv__link:hover {
   background-color: #582c3e;
   color: #ffffff;
   border-radius: 5px;
 }
 
-a:active,
-a:focus {
+.cv__link:active,
+.cv__link:focus {
   background-color: #dfc7d0;
   color: #582c3e;
   border-radius: 5px;
@@ -723,6 +741,80 @@ a:focus {
   }
 }
 
+.required {
+  color: #c73e1d;
+}
+
+.form {
+  width: 100%;
+}
+@media screen and (min-width: 900px) {
+  .form {
+    max-width: 600px;
+  }
+}
+.form__button {
+  display: flex;
+  justify-content: center;
+}
+.form__field {
+  margin-bottom: 16px;
+}
+.form__label {
+  font-size: 14px;
+  color: #0a0507;
+}
+.form__input {
+  width: 100%;
+  outline: 0;
+  border: 1px solid #0a0507;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+}
+.form__input:focus, .form__input:active {
+  border: 2px solid #582c3e;
+  border-left: 5px solid #582c3e;
+  outline: 0;
+}
+.form__legend {
+  font-size: 14px;
+  color: #0a0507;
+}
+.form__textarea {
+  width: 100%;
+  border: 1px solid #0a0507;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+}
+.form__textarea:focus, .form__textarea:active {
+  border: 2px solid #582c3e;
+  border-left: 5px solid #582c3e;
+  outline: 0;
+}
+
+.email__valid,
+.input__valid {
+  border: 2px solid #337357;
+  border-left: 5px solid #337357;
+}
+
+.email__invalid,
+.input__invalid {
+  border: 2px solid #c73e1d;
+  border-left: 5px solid #c73e1d;
+}
+
+.error-message {
+  color: #c73e1d;
+  text-align: center;
+  font-weight: 600;
+}
+
+.form-message {
+  font-size: 24px;
+  color: #4a6fa5;
+}
+
 .button {
   text-transform: uppercase;
   background-color: #dfc7d0;
@@ -791,6 +883,8 @@ body {
   line-height: 1.8;
   margin: 0;
   position: relative;
+  max-width: 1320px !important;
+  margin: 0 auto;
 }
 
 h1,

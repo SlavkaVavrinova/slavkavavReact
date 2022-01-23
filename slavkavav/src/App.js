@@ -7,7 +7,7 @@ import Portfolio from './Components/Portfolio/Portfolio';
 import Home from './Components/Home/Home';
 import Coaching from './Components/Coaching/Coaching';
 import Contact from './Components/Contact/Contact';
-import Instagram from './Components/Instagram/Instagram';
+
 import Cv from './Components/Cv/Cv';
 
 const App = () => {
@@ -22,7 +22,6 @@ const App = () => {
           <Route path="/koucovani" element={<Coaching />} />
           <Route path="/kontakt" element={<Contact />} />
         </Routes>
-        <Instagram />
       </div>
     </BrowserRouter>
   );
