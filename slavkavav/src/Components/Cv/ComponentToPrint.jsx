@@ -110,7 +110,7 @@ const ComponentToPrint = React.forwardRef((props, ref) => {
                     >
                       https://slavkavav.cz
                     </a>
-                    Next.js
+                    React
                   </li>
                   <li>
                     <a

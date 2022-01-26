@@ -1,10 +1,18 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import logo from './../../logo.svg';
 
 const Header = () => {
-  const [isMenuOpened, setisMenuOpened] = useState(false);
+  const [isMenuOpened, setIsMenuOpened] = useState(false);
+
+  const openMenu = () => {
+    setIsMenuOpened(!isMenuOpened);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpened(!isMenuOpened);
+  };
 
   const mobileMenuRef = useRef(null);
 
@@ -13,7 +21,7 @@ const Header = () => {
       mobileMenuRef.current &&
       !mobileMenuRef.current.contains(event.target)
     ) {
-      setisMenuOpened(false);
+      setIsMenuOpened(false);
     }
   };
 
@@ -23,80 +31,107 @@ const Header = () => {
       document.removeEventListener('click', handleClickOutside, true);
     };
   });
-  const openMenu = () => {
-    setisMenuOpened(!isMenuOpened);
-  };
+
+  const activeMenuItem = ({ isActive }) => (isActive ? 'activeItem' : '');
 
   return (
     <>
       <div className="navigation">
         <img
-          className="navigation__logo"
           src={logo}
+          className="navigation__logo"
           alt="Logo Slávka Vavřinová"
-        />
-        <span className="navigation__hamburger" onClick={openMenu}>
+        />{' '}
+        <span
+          className={
+            isMenuOpened
+              ? 'navigation__hamburger open'
+              : 'navigation__hamburger'
+          }
+          onClick={openMenu}
+        >
           <span className="navigation__rows"></span>
         </span>
-
         {isMenuOpened ? (
           <ul ref={mobileMenuRef} className="navigation-open">
+            <div className="hamburger__close" onClick={closeMenu}></div>
             <li className="navigation__item">
-              <Link to="/" onClick={openMenu}>
+              <NavLink className={activeMenuItem} to="/" onClick={openMenu}>
                 DOMŮ
-              </Link>
+              </NavLink>
             </li>
             <li className="navigation__item">
-              <Link to="/portfolio" onClick={openMenu}>
+              <NavLink
+                className={activeMenuItem}
+                to="/portfolio"
+                onClick={openMenu}
+              >
                 PORTFOLIO
-              </Link>
+              </NavLink>
             </li>
             <li className="navigation__item">
-              <Link to="/zivotopis" onClick={openMenu}>
+              <NavLink
+                className={activeMenuItem}
+                to="/zivotopis"
+                onClick={openMenu}
+              >
                 ŽIVOTOPIS
-              </Link>
+              </NavLink>
             </li>
             <li className="navigation__item">
-              <Link to="/koucovani" onClick={openMenu}>
+              <NavLink
+                className={activeMenuItem}
+                to="/koucovani"
+                onClick={openMenu}
+              >
                 KOUČOVÁNÍ
-              </Link>
+              </NavLink>
             </li>
             <li className="navigation__item">
-              <Link to="/kontakt" onClick={openMenu}>
+              <NavLink
+                className={activeMenuItem}
+                to="/kontakt"
+                onClick={openMenu}
+              >
                 KONTAKT
-              </Link>
+              </NavLink>
             </li>
           </ul>
         ) : null}
-
         <ul className="navigation__large">
           <li className="navigation__item">
-            <Link to="/">DOMŮ</Link>
+            <NavLink className={activeMenuItem} to="/">
+              DOMŮ
+            </NavLink>
           </li>
           <li className="navigation__item">
-            <Link to="/portfolio">PORTFOLIO</Link>
+            <NavLink className={activeMenuItem} to="/portfolio">
+              PORTFOLIO
+            </NavLink>
           </li>
           <li className="navigation__item">
-            <Link to="/zivotopis">ŽIVOTOPIS</Link>
+            <NavLink className={activeMenuItem} to="/zivotopis">
+              ŽIVOTOPIS
+            </NavLink>
           </li>
           <li className="navigation__item">
-            <Link to="/koucovani">KOUČOVÁNÍ</Link>
+            <NavLink className={activeMenuItem} to="/koucovani">
+              KOUČOVÁNÍ
+            </NavLink>
           </li>
           <li className="navigation__item">
-            <Link to="/kontakt" o>
+            <NavLink className={activeMenuItem} to="/kontakt" o>
               KONTAKT
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>
       <div className="banner">
-        <div className="banner__text">
-          <h1 className="banner__title">Slávka Vavřinová</h1>
-          <p>
-            ZAČÍNAJÍCÍ WEBOVÁ VÝVOJÁŘKA <br />A STUDENTKA UX
-          </p>
-        </div>
-        <div className="box"></div>
+        <div className="banner__box"></div>
+        <h1 className="banner__title">Slávka Vavřinová</h1>
+        <p className="banner__text">
+          ZAČÍNAJÍCÍ WEBOVÁ VÝVOJÁŘKA <br />A STUDENTKA UX
+        </p>
         {/* <img className="banner__img" src={slavka} alt=" Slávka Vavřinová" />*/}
       </div>{' '}
     </>

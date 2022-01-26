@@ -9,6 +9,7 @@ import Coaching from './Components/Coaching/Coaching';
 import Contact from './Components/Contact/Contact';
 
 import Cv from './Components/Cv/Cv';
+import Footer from './Components/Footer/Footer';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/koucovani" element={<Coaching />} />
           <Route path="/kontakt" element={<Contact />} />
         </Routes>
+        <Footer />
       </div>
     </BrowserRouter>
   );

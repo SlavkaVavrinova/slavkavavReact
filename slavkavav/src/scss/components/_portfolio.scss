@@ -4,16 +4,46 @@
 
 .item {
   text-align: center;
-  margin: 32px;
-  @include mixins.tablet {
+  margin: root.$xLarge 0;
+  border-radius: root.$radius;
+  background-color: colors.$light;
+  box-shadow: 0 5px 15px 0 rgb(0 0 0 / 10%), 0 15px 35px 0 rgb(0 0 0 / 5%);
+  transition: all 120ms ease;
+
+  @include mixins.special(500px) {
+    margin: 0 root.$xLarge calc(root.$xLarge + root.$spacer/2) root.$xLarge;
+  }
+
+  @include mixins.special(800px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
   }
 
   &__img {
     width: 100%;
-    @include mixins.tablet {
+    border-radius: root.$radius root.$radius 0 0;
+    display: block;
+    @include mixins.special(800px) {
       width: 100%;
+      border-radius: root.$radius 0 0 root.$radius;
     }
+  }
+
+  &__text {
+    padding: root.$spacer;
+    @include mixins.special(800px) {
+      padding: 0 0 0 root.$spacer;
+      text-align: left;
+    }
+  }
+
+  &__id {
+    font-size: root.$xxLarge;
+    margin: 0;
+  }
+
+  &__title {
+    margin-top: 0;
   }
 }

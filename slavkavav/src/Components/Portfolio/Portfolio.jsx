@@ -12,11 +12,11 @@ const Portfolio = () => (
     {webs.map((web) => (
       <div className="item" key={web.id}>
         <img className="item__img" src={web.img} alt={web.alt} />
-        <div>
-          <p className="bold">{web.id}</p>
-          <h3>{web.name}</h3>
+        <div className="item__text">
+          <p className="item__id">{web.id}</p>
+          <h3 className="item__title">{web.name}</h3>
           <p>{web.info}</p>
-          <button className="button">Prohlédnout</button>
+          <button className="button">Prohlédnout web</button>
         </div>
       </div>
     ))}
@@ -24,12 +24,19 @@ const Portfolio = () => (
 );
 
 const webs = [
-  {
+  /* {
     id: '06',
     img: `${budejcanda}`,
     alt: 'Web Budějčanda',
     name: 'Budějčanda',
     info: 'Frontendová část webu',
+  },*/
+  {
+    id: '06',
+    img: `${gerta}`,
+    alt: 'Web SlavkaVav',
+    name: 'SlavkaVav',
+    info: 'React',
   },
   {
     id: '05',
