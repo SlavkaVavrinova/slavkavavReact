@@ -178,22 +178,6 @@
   font-size: 24px;
   height: calc(100vh - 75px);
 }
-.navigation-open a {
-  color: #fffafc;
-  text-decoration: none;
-  height: 100%;
-  width: 100%;
-  display: block;
-  padding: 1.5em 0;
-}
-.navigation-open a:hover {
-  color: #582c3e;
-  background-color: #dfc7d0;
-}
-.navigation-open a:active {
-  color: #582c3e;
-  background-color: #fffafc;
-}
 .navigation__item {
   height: 4em;
   line-height: 1em;
@@ -245,17 +229,29 @@
 }
 
 .navigationLarge__link {
+  color: #fffafc;
   text-decoration: none;
   line-height: 100px;
+  width: 100%;
   vertical-align: middle;
   display: block;
-  padding: 0 calc(root.$spacer / 2);
-  color: #582c3e;
 }
 .navigationLarge__link:hover {
+  color: #582c3e;
   background-color: #dfc7d0;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 700px) {
+  .navigationLarge__link {
+    text-decoration: none;
+    display: block;
+    padding: 0 calc(root.$spacer / 2);
+    color: #582c3e;
+  }
+  .navigationLarge__link:hover {
+    background-color: #dfc7d0;
+  }
+}
+@media screen and (min-width: 700px) and (min-width: 1200px) {
   .navigationLarge__link {
     padding: 0 32px;
     height: 120px;
@@ -264,16 +260,17 @@
 }
 
 .activeItem {
-  background-color: #dfc7d0;
+  background-color: #fffafc;
   color: #582c3e;
+  border-top: 1px solid #582c3e;
+  border-bottom: 1px solid #582c3e;
 }
 @media screen and (min-width: 700px) {
   .activeItem {
     background-color: #582c3e;
     color: #fffafc;
-  }
-  .activeItem:hover {
-    color: #582c3e;
+    border-top: none;
+    border-bottom: none;
   }
 }
 
@@ -284,6 +281,12 @@
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
+  margin-top: 32px;
+}
+@media screen and (min-width: 700px) {
+  .footer {
+    margin-top: 48px;
+  }
 }
 
 .page {
@@ -520,7 +523,7 @@
   padding-right: 1em;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 800px) {
   .page {
     width: 21cm;
     min-height: 29.7cm;
@@ -916,6 +919,8 @@
 @media screen and (min-width: 900px) {
   .form {
     max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .form__button {
@@ -1110,6 +1115,10 @@ h3 {
   }
 }
 
+a {
+  color: #582c3e;
+}
+
 .main {
   padding: 16px;
 }
@@ -1133,4 +1142,8 @@ h3 {
 
 .bold {
   font-weight: 600;
+}
+
+.center {
+  text-align: center;
 }/*# sourceMappingURL=App.css.map */

@@ -126,24 +126,6 @@
     padding: 0;
     font-size: root.$large;
     height: calc(100vh - 75px);
-
-    & a {
-      color: colors.$light;
-      text-decoration: none;
-      height: 100%;
-      width: 100%;
-      display: block;
-      padding: 1.5em 0;
-
-      &:hover {
-        color: colors.$primary;
-        background-color: colors.$primaryLight;
-      }
-      &:active {
-        color: colors.$primary;
-        background-color: colors.$light;
-      }
-    }
   }
 
   &__item {
@@ -197,32 +179,46 @@
   }
 }
 .navigationLarge__link {
+  color: colors.$light;
   text-decoration: none;
   line-height: 100px;
+  width: 100%;
   vertical-align: middle;
   display: block;
-  padding: 0 calc(root.$spacer / 2);
-  color: colors.$primary;
 
   &:hover {
+    color: colors.$primary;
     background-color: colors.$primaryLight;
   }
 
-  @include mixins.large {
-    padding: 0 root.$spacer;
-    height: 120px;
-    line-height: 120px;
+  @include mixins.tablet {
+    text-decoration: none;
+
+    display: block;
+    padding: 0 calc(root.$spacer / 2);
+    color: colors.$primary;
+
+    &:hover {
+      background-color: colors.$primaryLight;
+    }
+    @include mixins.large {
+      padding: 0 root.$spacer;
+      height: 120px;
+      line-height: 120px;
+    }
   }
 }
+
 .activeItem {
-  background-color: colors.$primaryLight;
+  background-color: colors.$light;
   color: colors.$primary;
+  border-top: 1px solid colors.$primary;
+  border-bottom: 1px solid colors.$primary;
 
   @include mixins.tablet {
     background-color: colors.$primary;
     color: colors.$light;
-    &:hover {
-      color: colors.$primary;
-    }
+    border-top: none;
+    border-bottom: none;
   }
 }

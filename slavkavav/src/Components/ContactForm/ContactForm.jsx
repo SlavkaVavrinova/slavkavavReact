@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Timestamp } from 'firebase/firestore';
+import { collection, addDoc, Timestamp } from 'firebase/firestore';
 
-import db from '../../db';
+import { db } from '../../db';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
@@ -10,37 +10,29 @@ const ContactForm = () => {
   const [message, setMessage] = useState('');
   const [response, setResponse] = useState('');
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (name && email && subject && message === true) {
-      db.collection('contact')
-        .add({
-          name: name,
-          email: email,
-          subject: subject,
-          message: message,
-          datumVytvoreni: Timestamp.fromDate(new Date()),
-        })
-        .then(() => {
-          setResponse(
-            `Formulář byl úspěšně odeslán, na email: ${email} odpovím jakmile bude chvilka času.`,
-          );
-        })
-        .catch(() => {
-          setResponse(`Jejda, něco se nepovedlo. Zadej znovu.`);
-          console.log(name);
-        });
-
-      setName('');
-      setEmail('');
-      setSubject('');
-      setMessage('');
-    } else {
+    try {
+      await addDoc(collection(db, 'contact'), {
+        name: name,
+        email: email,
+        subject: subject,
+        message: message,
+        created: Timestamp.now(),
+        completed: false,
+      });
       setResponse(
-        'Doplňte chybějící požadované údaje a zaškrtněte, že nejste robot.',
+        `Formulář byl úspěšně odeslán. Odpověď dorazí na Váš email (${email}), jakmile bude chvilka. Děkuji Slávka`,
       );
+    } catch (err) {
+      setResponse(`Jejda, něco se nepovedlo. Zadej znovu.`);
     }
+
+    setName('');
+    setEmail('');
+    setSubject('');
+    setMessage('');
   };
 
   return (
