@@ -19,7 +19,9 @@ const Portfolio = () => (
           <p className="item__id">{web.id}</p>
           <h3 className="item__title">{web.name}</h3>
           <p>{web.info}</p>
-          <button className="button">Prohlédnout web</button>
+          <a href={web.href} target="_blank" rel="noreferrer">
+            <button className="button">Prohlédnout web</button>
+          </a>
         </div>
       </div>
     ))}
