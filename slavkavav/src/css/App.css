@@ -1,62 +1,111 @@
 @import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Montserrat:wght@100;400;600&display=swap");
 .banner {
   position: relative;
-  background-color: #582c3e;
   color: #fffafc;
   text-align: center;
+}
+.banner__title {
+  margin: -20px auto 0 auto;
+  max-width: 1200px;
+  color: #fffafc;
+  background-color: #582c3e;
 }
 .banner__text {
   padding: 0 2em;
   font-size: 80%;
-  margin: -1rem 0 0 0;
-}
-.banner__title {
-  margin: -20px 0 0 0;
+  margin: -1.5rem 0 0 0;
+  color: #fffafc;
 }
 .banner__box {
-  height: 300px;
-  background-image: url(../../Components/Header/img/slavkaMobile2.jpg);
+  height: 230px;
+  background-image: url(../../Components/Header/img/slavkaMobile.jpg);
   background-attachment: fixed;
-  background-size: 100%;
+  background-size: contain;
   background-repeat: no-repeat;
+  background-position: 0px 80px;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 350px) {
   .banner__box {
-    height: 400px;
+    height: 280px;
+  }
+}
+@media screen and (min-width: 485px) {
+  .banner__box {
+    height: 330px;
+  }
+}
+@media screen and (min-width: 585px) {
+  .banner__box {
+    height: 430px;
     background-image: url(../../Components/Header/img/slavkaWeb.jpg);
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 700px) {
+  .banner__box {
+    height: 350px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .banner__box {
+    height: 400px;
+  }
+}
+@media screen and (min-width: 950px) {
   .banner__box {
     height: 500px;
   }
 }
+@media screen and (min-width: 1400px) {
+  .banner__box {
+    height: 550px;
+    background-position: center 80px;
+  }
+}
 
 .navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
   width: 100%;
   height: 80px;
+  background-color: #fffafc;
+  z-index: 100;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
 }
 @media screen and (min-width: 700px) {
   .navigation {
-    height: 150px;
+    position: static;
+    height: 100px;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .navigation {
+    height: 120px;
     align-items: flex-start;
   }
 }
 .navigation__logo {
   cursor: pointer;
   padding: 10px;
+  height: 100%;
 }
 @media screen and (min-width: 700px) {
   .navigation__logo {
-    padding: 32px 0 32px calc(root.$spacer / 2);
-    height: 150px;
+    padding: calc(root.$spacer / 2);
+    height: 100px;
   }
 }
 @media screen and (min-width: 1200px) {
   .navigation__logo {
-    padding: 32px;
+    height: 120px;
   }
 }
 .navigation__hamburger {
@@ -65,6 +114,7 @@
   height: 37px;
   right: 20px;
   top: 0;
+  z-index: 1000;
   cursor: pointer;
   align-self: center;
 }
@@ -74,7 +124,7 @@
   }
 }
 .navigation__rows {
-  background: #000000;
+  background: #0a0507;
   background-size: 100% 7px;
   background-position: left top;
   background-repeat: no-repeat;
@@ -177,7 +227,7 @@
   right: 0px;
   height: 80px;
   width: 100px;
-  z-index: 1000;
+  z-index: 10000000;
   background-color: transparent;
 }
 
@@ -187,35 +237,43 @@
 @media screen and (min-width: 700px) {
   .navigation__large {
     display: flex;
-    text-align: center;
     list-style-type: none;
     text-decoration: none;
-    align-items: center;
-    height: 150px;
     margin: 0;
     padding: 0;
   }
-  .navigation__large a {
-    text-decoration: none;
-    height: 150px;
-    display: block;
-    padding: calc(root.$spacer / 2);
-  }
 }
-@media screen and (min-width: 700px) and (min-width: 1200px) {
-  .navigation__large a {
-    padding: 32px;
+
+.navigationLarge__link {
+  text-decoration: none;
+  line-height: 100px;
+  vertical-align: middle;
+  display: block;
+  padding: 0 calc(root.$spacer / 2);
+  color: #582c3e;
+}
+.navigationLarge__link:hover {
+  background-color: #dfc7d0;
+}
+@media screen and (min-width: 1200px) {
+  .navigationLarge__link {
+    padding: 0 32px;
+    height: 120px;
+    line-height: 120px;
   }
 }
 
 .activeItem {
   background-color: #dfc7d0;
-  color: #582c3e !important;
+  color: #582c3e;
 }
 @media screen and (min-width: 700px) {
   .activeItem {
     background-color: #582c3e;
-    color: #dfc7d0 !important;
+    color: #fffafc;
+  }
+  .activeItem:hover {
+    color: #582c3e;
   }
 }
 
@@ -223,6 +281,9 @@
   border-top: 1px solid #582c3e;
   padding: 1rem;
   text-align: center;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .page {
@@ -987,7 +1048,7 @@ body {
   line-height: 1.8;
   margin: 0;
   position: relative;
-  max-width: 1320px !important;
+  max-width: 1300px !important;
   margin: 0 auto;
 }
 
@@ -1001,20 +1062,52 @@ h1 {
   text-align: center;
   color: #dfc7d0;
   font-family: "Grand Hotel", cursive;
-  font-size: 400%;
+  font-size: 48px;
   font-weight: 200;
+}
+@media screen and (min-width: 500px) {
+  h1 {
+    font-size: 300%;
+  }
+}
+@media screen and (min-width: 700px) {
+  h1 {
+    font-size: 400%;
+  }
 }
 
 h2 {
   text-align: center;
-  font-size: 300%;
+  font-size: 32px;
   font-family: "Grand Hotel", cursive;
   font-weight: 200;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+@media screen and (min-width: 500px) {
+  h2 {
+    font-size: 200%;
+  }
+}
+@media screen and (min-width: 700px) {
+  h2 {
+    font-size: 300%;
+  }
 }
 
 h3 {
-  font-size: 200%;
+  font-size: 24px;
   font-weight: 400;
+}
+@media screen and (min-width: 500px) {
+  h3 {
+    font-size: 150%;
+  }
+}
+@media screen and (min-width: 700px) {
+  h3 {
+    font-size: 200%;
+  }
 }
 
 .main {

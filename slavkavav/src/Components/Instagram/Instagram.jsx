@@ -1,9 +1,11 @@
+import React from 'react';
+
 import { InstagramGallery } from 'instagram-gallery';
 
 const Instagram = () => {
   return (
     <>
-      <h2 >Sleduj mě na Instagramu</h2>
+      <h2>Sleduj mě na Instagramu</h2>
       <div className="instagram__area">
         <div className="instagram__mobile">
           <InstagramGallery

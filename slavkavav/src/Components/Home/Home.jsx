@@ -1,5 +1,6 @@
-import Skills from '../Skills/Skills';
+import React from 'react';
 
+import Skills from '../Skills/Skills';
 import Instagram from '../Instagram/Instagram';
 
 const Home = () => {

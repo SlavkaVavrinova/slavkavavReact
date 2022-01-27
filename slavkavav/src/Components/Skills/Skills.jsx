@@ -1,3 +1,5 @@
+import React from 'react';
+
 import html from './img/html.svg';
 import css from './img/css.svg';
 import javascript from './img/javascript.svg';

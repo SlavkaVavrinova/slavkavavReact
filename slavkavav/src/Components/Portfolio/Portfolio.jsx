@@ -1,3 +1,6 @@
+import React from 'react';
+
+import slavkaVav from './img/SlavkaVav.jpg';
 import appkaHyposka from './img/appka-hyposka.jpeg';
 import chataRuzenka from './img/chata-ruzenka.jpeg';
 import budejcanda from './img/budejcanda.jpeg';
@@ -29,28 +32,32 @@ const webs = [
     img: `${budejcanda}`,
     alt: 'Web Budějčanda',
     name: 'Budějčanda',
-    info: 'Frontendová část webu',
+    info: 'Next.js, Frontendová část webu',
+    href: 'https:/budejcanda.cz/'
   },*/
   {
     id: '06',
-    img: `${gerta}`,
+    img: `${slavkaVav}`,
     alt: 'Web SlavkaVav',
     name: 'SlavkaVav',
-    info: 'React',
+    info: 'React,Sass',
+    href: 'https://www.slavkavav.cz/',
   },
   {
     id: '05',
     img: `${gerta}`,
     alt: 'Web Pension Gerta',
     name: 'Pension Gerta',
-    info: 'Web se šablonou Eleventy',
+    info: 'Statický web se šablonou Eleventy',
+    href: 'https://www.gerta.cz/',
   },
   {
     id: '04',
     img: `${appkaHyposka}`,
     alt: 'Web Appka Hypoška',
     name: 'Appka Hypoška',
-    info: 'Závěrečný projekt Digitální akademie',
+    info: 'React, závěrečný projekt Digitální akademie',
+    href: 'https://appkahyposka.cz/',
   },
   {
     id: '03',
@@ -58,6 +65,7 @@ const webs = [
     alt: 'Web Statek Chlumeček',
     name: 'Statek Chlumeček',
     info: 'WordPress',
+    href: 'https://www.statekchlumecek.cz/',
   },
   {
     id: '02',
@@ -65,6 +73,7 @@ const webs = [
     alt: 'Web Chata Růženka',
     name: 'Chata Růženka',
     info: 'WordPress',
+    href: 'http://www.chataruzenka.cz/',
   },
 
   {
@@ -72,7 +81,8 @@ const webs = [
     img: `${chataGerta}`,
     alt: 'Web Chata Gerta',
     name: 'Chata Gerta',
-    info: 'WordPress',
+    info: 'Web se předělává',
+    href: 'http://www.chatagerta.cz/',
   },
 ];
 

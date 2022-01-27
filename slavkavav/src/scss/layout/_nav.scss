@@ -2,26 +2,41 @@
 @use '../base/root';
 @use '../base/mixins';
 .navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
   width: 100%;
   height: 80px;
+  background-color: colors.$light;
+  z-index: 100;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
 
   @include mixins.tablet {
-    height: 150px;
+    position: static;
+
+    height: 100px;
+    align-items: flex-start;
+  }
+  @include mixins.large {
+    height: 120px;
     align-items: flex-start;
   }
 
   &__logo {
     cursor: pointer;
     padding: 10px;
+    height: 100%;
 
     @include mixins.tablet {
-      padding: root.$spacer 0 root.$spacer calc(root.$spacer / 2);
-      height: 150px;
+      padding: calc(root.$spacer / 2);
+      height: 100px;
     }
     @include mixins.large {
-      padding: root.$spacer;
+      height: 120px;
     }
   }
 
@@ -31,6 +46,7 @@
     height: 37px;
     right: 20px;
     top: 0;
+    z-index: 1000;
     cursor: pointer;
     align-self: center;
     @include mixins.tablet {
@@ -39,7 +55,7 @@
   }
 
   &__rows {
-    background: #000000;
+    background: colors.$dark;
     background-size: 100% 7px;
     background-position: left top;
     background-repeat: no-repeat;
@@ -163,7 +179,7 @@
   right: 0px;
   height: 80px;
   width: 100px;
-  z-index: 1000;
+  z-index: 10000000;
   background-color: transparent;
 }
 
@@ -172,31 +188,41 @@
 
   @include mixins.tablet {
     display: flex;
-    text-align: center;
+
     list-style-type: none;
     text-decoration: none;
-    align-items: center;
-    height: 150px;
+
     margin: 0;
     padding: 0;
-    & a {
-      text-decoration: none;
-      height: 150px;
-      display: block;
-      padding: calc(root.$spacer / 2);
-      @include mixins.large {
-        padding: root.$spacer;
-      }
-    }
   }
 }
+.navigationLarge__link {
+  text-decoration: none;
+  line-height: 100px;
+  vertical-align: middle;
+  display: block;
+  padding: 0 calc(root.$spacer / 2);
+  color: colors.$primary;
 
+  &:hover {
+    background-color: colors.$primaryLight;
+  }
+
+  @include mixins.large {
+    padding: 0 root.$spacer;
+    height: 120px;
+    line-height: 120px;
+  }
+}
 .activeItem {
   background-color: colors.$primaryLight;
-  color: colors.$primary !important;
+  color: colors.$primary;
 
   @include mixins.tablet {
     background-color: colors.$primary;
-    color: colors.$primaryLight !important;
+    color: colors.$light;
+    &:hover {
+      color: colors.$primary;
+    }
   }
 }

@@ -31,7 +31,7 @@ body {
   line-height: 1.8;
   margin: 0;
   position: relative;
-  max-width: 1320px !important;
+  max-width: 1300px !important;
   margin: 0 auto;
 }
 
@@ -45,20 +45,44 @@ h1 {
   text-align: center;
   color: colors.$primaryLight;
   font-family: root.$font-special;
-  font-size: 400%;
+  font-size: root.$xxLarge;
   font-weight: 200;
+
+  @include mixins.special(500px) {
+    font-size: 300%;
+  }
+
+  @include mixins.tablet {
+    font-size: 400%;
+  }
 }
 
 h2 {
   text-align: center;
-  font-size: 300%;
+  font-size: root.$xLarge;
   font-family: root.$font-special;
   font-weight: 200;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  @include mixins.special(500px) {
+    font-size: 200%;
+  }
+
+  @include mixins.tablet {
+    font-size: 300%;
+  }
 }
 
 h3 {
-  font-size: 200%;
+  font-size: root.$large;
   font-weight: 400;
+  @include mixins.special(500px) {
+    font-size: 150%;
+  }
+
+  @include mixins.tablet {
+    font-size: 200%;
+  }
 }
 
 .main {

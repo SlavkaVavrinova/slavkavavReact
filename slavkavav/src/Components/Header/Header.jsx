@@ -32,16 +32,21 @@ const Header = () => {
     };
   });
 
-  const activeMenuItem = ({ isActive }) => (isActive ? 'activeItem' : '');
+  const activeMenuItem = ({ isActive }) =>
+    isActive ? 'navigationLarge__link activeItem' : 'navigationLarge__link';
 
   return (
     <>
       <div className="navigation">
-        <img
-          src={logo}
-          className="navigation__logo"
-          alt="Logo Slávka Vavřinová"
-        />{' '}
+        <NavLink to="/">
+          {' '}
+          <img
+            src={logo}
+            className="navigation__logo"
+            alt="Logo Slávka Vavřinová"
+          />
+        </NavLink>
+
         <span
           className={
             isMenuOpened
@@ -132,8 +137,7 @@ const Header = () => {
         <p className="banner__text">
           ZAČÍNAJÍCÍ WEBOVÁ VÝVOJÁŘKA <br />A STUDENTKA UX
         </p>
-        {/* <img className="banner__img" src={slavka} alt=" Slávka Vavřinová" />*/}
-      </div>{' '}
+      </div>
     </>
   );
 };
