@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { collection, addDoc, Timestamp } from 'firebase/firestore';
+import validator from 'validator';
 
 import { db } from '../../db';
 
@@ -9,30 +10,57 @@ const ContactForm = () => {
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
   const [response, setResponse] = useState('');
+  const [error, setError] = useState('');
+
+  const [nameMessageValid, setNameMessageValid] = useState(true);
+
+  const validName = nameMessageValid !== true ? 'Chybí vyplnit jméno' : '';
+  useEffect(() => {
+    setNameMessageValid(name.length > 2);
+  }, [name]);
+
+  const [emailMessageValid, setemailMessageValid] = useState(true);
+  const validEmail = emailMessageValid !== true ? 'Zatejte platný email' : '';
+  useEffect(() => {
+    setemailMessageValid(validator.isEmail(email));
+  }, [email]);
+
+  const [messageMessageValid, setMessageMessageValid] = useState(true);
+  const validMessage =
+    messageMessageValid !== true ? 'Chybí vyplnit zprávu' : '';
+
+  useEffect(() => {
+    setMessageMessageValid(message.length > 2);
+  }, [message]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    if (validator.isEmail(email) && name.length > 2 && message.length > 2) {
+      try {
+        await addDoc(collection(db, 'contact'), {
+          name: name,
+          email: email,
+          subject: subject,
+          message: message,
+          created: Timestamp.now(),
+          completed: false,
+        });
 
-    try {
-      await addDoc(collection(db, 'contact'), {
-        name: name,
-        email: email,
-        subject: subject,
-        message: message,
-        created: Timestamp.now(),
-        completed: false,
-      });
-      setResponse(
-        `Formulář byl úspěšně odeslán. Odpověď dorazí na Váš email (${email}), jakmile bude chvilka. Děkuji Slávka`,
-      );
-    } catch (err) {
-      setResponse(`Jejda, něco se nepovedlo. Zadej znovu.`);
+        setResponse(
+          `Formulář byl úspěšně odeslán. Odpověď dorazí na Váš email (${email}), jakmile bude chvilka. Děkuji Slávka`,
+        );
+        setName('');
+        setEmail('');
+        setSubject('');
+        setMessage('');
+        setError('');
+      } catch (err) {
+        setResponse(`Jejda, něco se nepovedlo. Zadej znovu.`);
+      }
+    } else {
+      setError(`Zadej chybějící údaje, formulář není odeslán.`);
+      setResponse('');
     }
-
-    setName('');
-    setEmail('');
-    setSubject('');
-    setMessage('');
   };
 
   return (
@@ -48,8 +76,8 @@ const ContactForm = () => {
           type="text"
           name="name"
           id="name"
-          required
         />
+        <div className="infoField">{validName}</div>
       </div>
 
       <div className="form__field">
@@ -63,13 +91,13 @@ const ContactForm = () => {
           type="email"
           name="email"
           id="email"
-          required
         />
+        <div className="infoField">{validEmail}</div>
       </div>
 
       <div className="form__field">
         <label className="form__label" for="subject">
-          Předmět<span className="required">*</span>
+          Předmět
         </label>
         <input
           className="form__input"
@@ -78,7 +106,6 @@ const ContactForm = () => {
           type="text"
           name="subject"
           id="subject"
-          required
         />
       </div>
 
@@ -95,10 +122,10 @@ const ContactForm = () => {
           id="message"
           cols="20"
           maxlength="2000"
-          required
         ></textarea>
+        <div className="infoField">{validMessage}</div>
       </div>
-      <p className="text-right small">
+      <p className="right small">
         <span className="required">*</span> Požadované údaje
       </p>
 
@@ -109,7 +136,8 @@ const ContactForm = () => {
           Odeslat
         </button>
       </div>
-      <p>{response}</p>
+      <p className="success-message">{response}</p>
+      <p className="error-message">{error}</p>
     </form>
   );
 };

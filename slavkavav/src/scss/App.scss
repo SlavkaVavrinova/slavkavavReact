@@ -64,6 +64,7 @@ h2 {
   font-weight: 200;
   margin-top: 0;
   margin-bottom: 0.5em;
+
   @include mixins.special(500px) {
     font-size: 200%;
   }
@@ -115,4 +116,16 @@ a {
 
 .center {
   text-align: center;
+}
+
+@keyframes startScale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

@@ -6,6 +6,17 @@
   color: colors.$error;
 }
 
+.contact__question {
+  text-align: center;
+  font-weight: bold;
+  animation: startScale 1s;
+  margin-bottom: -10px;
+
+  @include mixins.tablet {
+    font-size: root.$large;
+  }
+}
+
 .form {
   width: 100%;
 
@@ -21,6 +32,7 @@
   }
   &__field {
     margin-bottom: root.$spacer/2;
+    position: relative;
   }
 
   &__label {
@@ -62,14 +74,12 @@
   }
 }
 
-.email__valid,
-.input__valid {
+.validBorder {
   border: 2px solid colors.$success;
   border-left: 5px solid colors.$success;
 }
 
-.email__invalid,
-.input__invalid {
+.invalidBorder {
   border: 2px solid colors.$error;
   border-left: 5px solid colors.$error;
 }
@@ -80,7 +90,25 @@
   font-weight: 600;
 }
 
+.success-message {
+  color: colors.$success;
+  text-align: center;
+  font-weight: 600;
+}
+
 .form-message {
   font-size: root.$large;
   color: colors.$formMessage;
+}
+
+.infoField {
+  font-size: small;
+  position: absolute;
+  top: 0.5em;
+  right: 0;
+}
+
+.right {
+  text-align: right;
+  margin-top: 0;
 }

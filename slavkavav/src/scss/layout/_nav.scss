@@ -1,6 +1,7 @@
 @use '../base/colors';
 @use '../base/root';
 @use '../base/mixins';
+
 .navigation {
   position: fixed;
   top: 0;
@@ -14,6 +15,8 @@
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
+  border: none;
+  outline: none;
 
   @include mixins.tablet {
     position: static;
@@ -30,6 +33,10 @@
     cursor: pointer;
     padding: 10px;
     height: 100%;
+    transition: transform 1s;
+    &:hover {
+      transform: scale(1.05);
+    }
 
     @include mixins.tablet {
       padding: calc(root.$spacer / 2);
@@ -41,7 +48,7 @@
   }
 
   &__hamburger {
-    width: 60px;
+    width: 40px;
     position: relative;
     height: 37px;
     right: 20px;
@@ -49,18 +56,22 @@
     z-index: 1000;
     cursor: pointer;
     align-self: center;
+    transition: transform 1s;
+    &:hover {
+      transform: scale(1.05);
+    }
     @include mixins.tablet {
       display: none;
     }
   }
 
   &__rows {
-    background: colors.$dark;
-    background-size: 100% 7px;
+    background: colors.$primary;
+    background-size: 100% 4px;
     background-position: left top;
     background-repeat: no-repeat;
     width: 100%;
-    height: 7px;
+    height: 5px;
     display: block;
     top: 15px;
     left: 0;
@@ -75,14 +86,14 @@
     box-shadow: 0 0 3px rgb(0 0 0 / 75%);
 
     &::before {
-      background: #000000;
+      background: colors.$primary;
       position: absolute;
       left: 0;
       content: '';
       top: -15px;
       left: 0;
       width: 100%;
-      height: 7px;
+      height: 5px;
       -webkit-transition: all 500ms;
       -moz-transition: all 500ms;
       -o-transition: all 500ms;
@@ -94,15 +105,14 @@
     }
 
     &::after {
-      background: #000000;
-
+      background: colors.$primary;
       position: absolute;
       left: 0;
       content: '';
       bottom: -15px;
       left: 0;
       width: 100%;
-      height: 7px;
+      height: 5px;
       -webkit-transition: all 500ms;
       -moz-transition: all 500ms;
       -o-transition: all 500ms;
@@ -113,6 +123,7 @@
       box-shadow: 0 0 3px rgb(0 0 0 / 75%);
     }
   }
+
   &-open {
     position: absolute;
     top: 80px;
@@ -151,7 +162,6 @@
 
 .navigation__hamburger.open .navigation__rows::after {
   transform: rotate(-45deg);
-
   top: 0px;
 }
 
@@ -170,7 +180,6 @@
 
   @include mixins.tablet {
     display: flex;
-
     list-style-type: none;
     text-decoration: none;
 
@@ -178,6 +187,7 @@
     padding: 0;
   }
 }
+
 .navigationLarge__link {
   color: colors.$light;
   text-decoration: none;
@@ -193,7 +203,6 @@
 
   @include mixins.tablet {
     text-decoration: none;
-
     display: block;
     padding: 0 calc(root.$spacer / 2);
     color: colors.$primary;
@@ -201,6 +210,7 @@
     &:hover {
       background-color: colors.$primaryLight;
     }
+
     @include mixins.large {
       padding: 0 root.$spacer;
       height: 120px;

@@ -39,7 +39,6 @@ const Header = () => {
     <>
       <div className="navigation">
         <NavLink to="/">
-          {' '}
           <img
             src={logo}
             className="navigation__logo"

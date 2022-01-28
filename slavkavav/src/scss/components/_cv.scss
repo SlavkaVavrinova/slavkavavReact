@@ -2,6 +2,9 @@
 @use '../base/root';
 @use '../base/mixins';
 
+.figma {
+  margin-top: root.$spacer;
+}
 .page {
   width: 100vw;
   background: white;

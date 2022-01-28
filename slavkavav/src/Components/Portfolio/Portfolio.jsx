@@ -14,13 +14,19 @@ const Portfolio = () => (
 
     {webs.map((web) => (
       <div className="item" key={web.id}>
-        <img className="item__img" src={web.img} alt={web.alt} />
+        <div className="item__imgBorder">
+          <picture>
+            <img className="item__img" src={web.img} alt={web.alt} />
+          </picture>
+        </div>
         <div className="item__text">
           <p className="item__id">{web.id}</p>
           <h3 className="item__title">{web.name}</h3>
           <p>{web.info}</p>
           <a href={web.href} target="_blank" rel="noreferrer">
-            <button className="button">Prohlédnout web</button>
+            <button className="button button--targetBlank">
+              Prohlédnout web
+            </button>
           </a>
         </div>
       </div>

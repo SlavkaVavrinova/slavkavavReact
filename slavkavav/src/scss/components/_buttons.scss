@@ -4,17 +4,21 @@
 
 .button {
   text-transform: uppercase;
-  background-color: colors.$primaryLight;
+  background-color: colors.$primary;
   border: none;
-  color: colors.$primary;
+  color: colors.$light;
   font-weight: 600;
-
   padding: 0.7rem 1.4rem;
-  box-shadow: 3px 3px 5px colors.$primary;
-  cursor: pointer;
+  box-shadow: 3px 3px 5px rgb(0 0 0 / 10%), 0 15px 35px 0 rgb(0 0 0 / 10%);
 
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #7b4a5e;
+  }
   &:active {
-    box-shadow: 1px 1px 3px colors.$primary;
+    box-shadow: 1px 1px 3px rgb(0 0 0 / 10%), 0 15px 35px 0 rgb(0 0 0 / 10%);
     transform: translate(2px, 2px);
   }
 
@@ -36,22 +40,19 @@
   &__cv {
     text-align: center;
   }
-}
 
-.button--secondary {
-  background-color: transparent;
-  color: colors.$secondary;
-  border: 1px solid colors.$secondary;
-}
-
-.section__buttons {
-  display: flex;
-  justify-content: space-between;
-  &--one {
-    justify-content: flex-end;
+  &--targetBlank {
+    position: relative;
+    &::after {
+      content: '';
+      right: 2px;
+      bottom: 2px;
+      width: 10px;
+      height: 10px;
+      background-image: url(../../Components/Home/img/targetBlank.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+    }
   }
-}
-
-.button--right {
-  text-align: end;
 }
