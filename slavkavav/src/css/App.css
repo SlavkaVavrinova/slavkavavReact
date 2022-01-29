@@ -1,20 +1,47 @@
 @import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Montserrat:wght@100;400;600&display=swap");
 .banner {
-  position: relative;
   color: #fffafc;
+  max-width: 1200px;
+  margin: 0 auto 0 auto;
+}
+.banner__info {
+  background-color: #582c3e;
   text-align: center;
+  position: relative;
 }
 .banner__title {
-  margin: -20px auto 0 auto;
-  max-width: 1200px;
-  color: #fffafc;
-  background-color: #582c3e;
+  margin: 0;
+  line-height: 65px;
+}
+@media screen and (min-width: 850px) {
+  .banner__title {
+    line-height: 84px;
+  }
 }
 .banner__text {
-  padding: 0 2em;
   font-size: 80%;
-  margin: -1.5rem 0 0 0;
-  color: #fffafc;
+  margin: -0.5em 0 0 0;
+}
+@media screen and (min-width: 850px) {
+  .banner__text {
+    position: absolute;
+    bottom: 0;
+    right: 1em;
+    height: 100%;
+    text-align: left;
+    line-height: 1.5;
+    padding-top: 2em;
+  }
+}
+@media screen and (min-width: 940px) {
+  .banner__text {
+    right: 2em;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .banner__text {
+    right: 90px;
+  }
 }
 .banner__box {
   height: 230px;
@@ -37,7 +64,7 @@
     height: 330px;
   }
 }
-@media screen and (min-width: 585px) {
+@media screen and (min-width: 625px) {
   .banner__box {
     height: 430px;
     background-image: url(../../Components/Header/img/slavkaWeb.jpg);
@@ -189,8 +216,8 @@
   height: calc(100vh - 75px);
 }
 .navigation__item {
-  height: 4em;
-  line-height: 1em;
+  height: calc((100vh - 75px) / 6);
+  line-height: calc((100vh - 75px) / 6);
   margin: 0;
 }
 @media screen and (min-width: 700px) {
@@ -241,10 +268,9 @@
 .navigationLarge__link {
   color: #fffafc;
   text-decoration: none;
-  line-height: 100px;
   width: 100%;
   vertical-align: middle;
-  display: block;
+  display: inline-block;
 }
 .navigationLarge__link:hover {
   color: #582c3e;
@@ -253,6 +279,7 @@
 @media screen and (min-width: 700px) {
   .navigationLarge__link {
     text-decoration: none;
+    line-height: 100px;
     display: block;
     padding: 0 calc(root.$spacer / 2);
     color: #582c3e;
@@ -834,7 +861,7 @@
   margin-top: 0;
 }
 
-@media (min-width: 480px) {
+@media screen and (min-width: 700px) {
   .instagram__mobile {
     display: none;
   }
@@ -842,12 +869,12 @@
 .instagram__tablet {
   display: none;
 }
-@media (min-width: 480px) {
+@media screen and (min-width: 700px) {
   .instagram__tablet {
     display: inline-block;
   }
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .instagram__tablet {
     display: none;
   }
@@ -855,25 +882,28 @@
 .instagram__web {
   display: none;
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .instagram__web {
     display: inline-block;
   }
 }
 
 .instagram-gallery {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 5px;
+  gap: 5px 10px;
 }
-@media (min-width: 480px) {
+@media screen and (min-width: 700px) {
   .instagram-gallery {
     grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
   }
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .instagram-gallery {
     grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
   }
 }
 
@@ -881,36 +911,48 @@
   width: 100%;
 }
 
-@media screen and (min-width: 500px) {
+.skills__grid {
+  margin-bottom: 32px;
+}
+@media screen and (min-width: 400px) {
   .skills__grid {
+    grid-template-columns: repeat(2, 1fr);
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 16px;
+    gap: 32px;
   }
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 580px) {
   .skills__grid {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 770px) {
+  .skills__grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 @media screen and (min-width: 1200px) {
   .skills__grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 .skills__item {
   background-image: url(../../Components/Skills/img/kolo.svg);
-  background-position: top center;
-  background-size: auto 100%;
+  background-position: center center;
+  background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
-  padding: 32px;
-  margin: 16px 0;
+  vertical-align: center;
+  padding: 0;
+  margin: 0;
+  aspect-ratio: 1/1;
+  position: relative;
+  padding-top: 30%;
+  margin: 16px 32px;
 }
-@media screen and (min-width: 500) {
+@media screen and (min-width: 400px) {
   .skills__item {
-    background-size: auto 90%;
+    margin: 0;
   }
 }
 .skills__icon {
@@ -949,6 +991,27 @@
     font-size: 24px;
   }
 }
+.contact__socialIcons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  margin-top: 32px;
+}
+.contact__socialIcons--center {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.contact__icon {
+  width: 2rem;
+  margin-right: 1em;
+}
+.contact__row {
+  display: flex;
+  align-items: center;
+  width: 250px;
+  margin: 16px auto;
+}
 
 .form {
   width: 100%;
@@ -959,10 +1022,6 @@
     margin-left: auto;
     margin-right: auto;
   }
-}
-.form__button {
-  display: flex;
-  justify-content: center;
 }
 .form__field {
   margin-bottom: 16px;
@@ -1047,8 +1106,12 @@
   font-weight: 600;
   padding: 0.7rem 1.4rem;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1), 0 15px 35px 0 rgba(0, 0, 0, 0.1);
+  display: inline-block;
   cursor: pointer;
   transition: background-color 0.3s;
+}
+.button__row {
+  text-align: center;
 }
 .button:hover {
   background-color: #7b4a5e;
@@ -1140,7 +1203,7 @@ h2 {
   font-size: 32px;
   font-family: "Grand Hotel", cursive;
   font-weight: 200;
-  margin-top: 0;
+  margin-top: 32px;
   margin-bottom: 0.5em;
 }
 @media screen and (min-width: 500px) {
@@ -1169,8 +1232,23 @@ h3 {
   }
 }
 
-a {
+.link {
   color: #582c3e;
+  position: relative;
+  text-decoration: none;
+  transition: background-color 0.25s;
+}
+.link::after {
+  background: linear-gradient(120deg, #dfc7d0 0%, #dfc7d0 50%, #582c3e 100%);
+  position: absolute;
+  right: 0px;
+  content: "";
+  bottom: -2px;
+  width: 100%;
+  height: 3px;
+}
+.link:hover {
+  background: linear-gradient(120deg, #dfc7d0 0%, #dfc7d0 50%, #582c3e 100%);
 }
 
 .main {

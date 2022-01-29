@@ -131,7 +131,7 @@ const ContactForm = () => {
 
       <div className="error-message" id="error-message"></div>
 
-      <div className="form__button">
+      <div className="button__row">
         <button className="button" type="submit" name="send" id="send">
           Odeslat
         </button>

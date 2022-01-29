@@ -5,7 +5,11 @@ const Footer = () => {
   return (
     <footer class="footer">
       <div class="footer__copyright">
-        &copy; <Link to="/"> SlavkaVav.cz </Link> 2021
+        &copy;{' '}
+        <Link className="link" to="/">
+          SlavkaVav
+        </Link>{' '}
+        2022
       </div>
     </footer>
   );

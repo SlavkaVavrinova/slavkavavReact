@@ -4,33 +4,40 @@
 
 .skills {
   &__grid {
-    @include mixins.special(500px) {
+    margin-bottom: root.$spacer;
+    @include mixins.special(400px) {
+      grid-template-columns: repeat(2, 1fr);
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr;
-      gap: root.$spacer/2;
+      gap: root.$spacer;
     }
 
-    @include mixins.tablet {
-      grid-template-columns: 1fr 1fr 1fr;
+    @include mixins.special(580px) {
+      grid-template-columns: repeat(3, 1fr);
     }
 
+    @include mixins.special(770px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
     @include mixins.large {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: repeat(6, 1fr);
     }
   }
 
   &__item {
     background-image: url(../../Components/Skills/img/kolo.svg);
-    background-position: top center;
-    background-size: auto 100%;
+    background-position: center center;
+    background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
-    padding: root.$spacer;
-    margin: root.$spacer/2 0;
-
-    @include mixins.special(500) {
-      background-size: auto 90%;
+    vertical-align: center;
+    padding: 0;
+    margin: 0;
+    aspect-ratio: 1/1;
+    position: relative;
+    padding-top: 30%;
+    margin: root.$spacer/2 root.$spacer;
+    @include mixins.special(400px) {
+      margin: 0;
     }
   }
 

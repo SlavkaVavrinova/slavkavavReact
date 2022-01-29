@@ -6,15 +6,21 @@ const Coaching = () => {
       <h2>Koučování</h2>
       <p>
         Chceš si sama/sám udělat web? Vyraž do{' '}
-        <a href="https://www.czechitas.cz/" target="_blank" rel="noreferrer">
-          Czechitas{' '}
-        </a>
+        <a
+          className="link"
+          href="https://www.czechitas.cz/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Czechitas
+        </a>{' '}
         a tam se to můžeš naučit. Na výběr je nespočet kurzů.
       </p>
-      <p>Aktuálně koučuji na následujících kurzech:</p>
+      <p>Aktuálně koučuji na následujících:</p>
       <ul>
         <li>
           <a
+            className="link"
             href="https://www.czechitas.cz/kurzy/figma"
             target="_blank"
             rel="noreferrer"
@@ -25,6 +31,7 @@ const Coaching = () => {
         </li>
         <li>
           <a
+            className="link"
             href="https://www.czechitas.cz/kurzy/react-1"
             target="_blank"
             rel="noreferrer"
@@ -35,6 +42,7 @@ const Coaching = () => {
         </li>
         <li>
           <a
+            className="link"
             href="https://www.czechitas.cz/kurzy/uvod-do-html-a-css"
             target="_blank"
             rel="noreferrer"
@@ -45,6 +53,7 @@ const Coaching = () => {
         </li>
         <li>
           <a
+            className="link"
             href="https://www.czechitas.cz/kurzy/stan-se-koderkou"
             target="_blank"
             rel="noreferrer"

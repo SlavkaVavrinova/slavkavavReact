@@ -3,23 +3,45 @@
 @use '../base/mixins';
 
 .banner {
-  position: relative;
-
   color: colors.$light;
-  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto 0 auto;
+
+  &__info {
+    background-color: colors.$primary;
+    text-align: center;
+    position: relative;
+  }
 
   &__title {
-    margin: -20px auto 0 auto;
-    max-width: 1200px;
-    color: colors.$light;
-    background-color: colors.$primary;
+    margin: 0;
+    line-height: 65px;
+
+    @include mixins.special(850px) {
+      line-height: 84px;
+    }
   }
 
   &__text {
-    padding: 0 2em;
     font-size: 80%;
-    margin: -1.5rem 0 0 0;
-    color: colors.$light;
+    margin: -0.5em 0 0 0;
+
+    @include mixins.special(850px) {
+      position: absolute;
+      bottom: 0;
+      right: 1em;
+      height: 100%;
+      text-align: left;
+      line-height: 1.5;
+      padding-top: 2em;
+    }
+    @include mixins.special(940px) {
+      right: 2em;
+    }
+
+    @include mixins.special(1000px) {
+      right: 90px;
+    }
   }
 
   &__box {
@@ -41,7 +63,7 @@
       height: 330px;
     }
 
-    @include mixins.special(585px) {
+    @include mixins.special(625px) {
       height: 430px;
       background-image: url(../../Components/Header/img/slavkaWeb.jpg);
     }

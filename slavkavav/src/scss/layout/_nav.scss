@@ -42,6 +42,7 @@
       padding: calc(root.$spacer / 2);
       height: 100px;
     }
+
     @include mixins.large {
       height: 120px;
     }
@@ -140,9 +141,10 @@
   }
 
   &__item {
-    height: 4em;
-    line-height: 1em;
+    height: calc((100vh - 75px) / 6);
+    line-height: calc((100vh - 75px) / 6);
     margin: 0;
+
     @include mixins.tablet {
       color: colors.$dark;
       height: 150px;
@@ -182,7 +184,6 @@
     display: flex;
     list-style-type: none;
     text-decoration: none;
-
     margin: 0;
     padding: 0;
   }
@@ -191,10 +192,9 @@
 .navigationLarge__link {
   color: colors.$light;
   text-decoration: none;
-  line-height: 100px;
   width: 100%;
   vertical-align: middle;
-  display: block;
+  display: inline-block;
 
   &:hover {
     color: colors.$primary;
@@ -203,6 +203,7 @@
 
   @include mixins.tablet {
     text-decoration: none;
+    line-height: 100px;
     display: block;
     padding: 0 calc(root.$spacer / 2);
     color: colors.$primary;

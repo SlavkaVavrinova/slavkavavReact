@@ -11,7 +11,7 @@ const Instagram = () => {
           <InstagramGallery
             className="instagram__feed"
             accessToken="IGQVJWTFQ3QjFLT2J2czZAFaUxHSVNLYzdQY1dyZA2ZA6ZAGtjRTZApanZAlVmlFeEtpYy1tVU1zdXEwZAW5VVW1qemw1cnM2XzZAieG1TeXJjeHJnejN1MnRBNjNGZAndYWG9kc2xfUnItZAFBPdUpfQjA0d0RtZAAZDZD"
-            count={2}
+            count={4}
           />
         </div>
 

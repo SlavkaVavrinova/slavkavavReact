@@ -62,7 +62,7 @@ h2 {
   font-size: root.$xLarge;
   font-family: root.$font-special;
   font-weight: 200;
-  margin-top: 0;
+  margin-top: root.$spacer;
   margin-bottom: 0.5em;
 
   @include mixins.special(500px) {
@@ -77,6 +77,7 @@ h2 {
 h3 {
   font-size: root.$large;
   font-weight: 400;
+
   @include mixins.special(500px) {
     font-size: 150%;
   }
@@ -86,11 +87,40 @@ h3 {
   }
 }
 
-a {
+.link {
   color: colors.$primary;
+  position: relative;
+  text-decoration: none;
+  transition: background-color 0.25s;
+
+  &::after {
+    background: linear-gradient(
+      120deg,
+      colors.$primaryLight 0%,
+      colors.$primaryLight 50%,
+      colors.$primary 100%
+    );
+
+    position: absolute;
+    right: 0px;
+    content: '';
+    bottom: -2px;
+    width: 100%;
+    height: 3px;
+  }
+
+  &:hover {
+    background: linear-gradient(
+      120deg,
+      colors.$primaryLight 0%,
+      colors.$primaryLight 50%,
+      colors.$primary 100%
+    );
+  }
 }
+
 .main {
-  padding: root.$spacer/2;
+  padding: root.$spacer / 2;
 
   @include mixins.tablet {
     padding: root.$spacer;

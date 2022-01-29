@@ -6,14 +6,39 @@
   color: colors.$error;
 }
 
-.contact__question {
-  text-align: center;
-  font-weight: bold;
-  animation: startScale 1s;
-  margin-bottom: -10px;
+.contact {
+  &__question {
+    text-align: center;
+    font-weight: bold;
+    animation: startScale 1s;
+    margin-bottom: -10px;
 
-  @include mixins.tablet {
-    font-size: root.$large;
+    @include mixins.tablet {
+      font-size: root.$large;
+    }
+  }
+
+  &__socialIcons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    margin-top: root.$spacer;
+    &--center {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+    }
+  }
+
+  &__icon {
+    width: 2rem;
+    margin-right: 1em;
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    width: 250px;
+    margin: root.$spacer/2 auto;
   }
 }
 
@@ -26,10 +51,6 @@
     margin-right: auto;
   }
 
-  &__button {
-    display: flex;
-    justify-content: center;
-  }
   &__field {
     margin-bottom: root.$spacer/2;
     position: relative;

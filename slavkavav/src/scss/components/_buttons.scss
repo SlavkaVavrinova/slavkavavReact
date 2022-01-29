@@ -10,6 +10,11 @@
   font-weight: 600;
   padding: 0.7rem 1.4rem;
   box-shadow: 3px 3px 5px rgb(0 0 0 / 10%), 0 15px 35px 0 rgb(0 0 0 / 10%);
+  display: inline-block;
+
+  &__row {
+    text-align: center;
+  }
 
   cursor: pointer;
   transition: background-color 0.3s;
