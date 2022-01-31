@@ -1,6 +1,7 @@
 import React from 'react';
 import './scss/App.scss';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import ScrollToTop from './Components/ScrollToTop';
 
 import Header from './Components/Header/Header';
 import Portfolio from './Components/Portfolio/Portfolio';
@@ -14,6 +15,7 @@ import Footer from './Components/Footer/Footer';
 const App = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="App">
         <Header />
         <Routes>

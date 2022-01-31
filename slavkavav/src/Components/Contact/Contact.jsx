@@ -20,17 +20,15 @@ const Contact = () => {
             vavrinovas@gmail.com
           </a>
         </div>
-
-        <div className="contact__row">
-          <img className="contact__icon" src={address} alt="Ikona adresy" />{' '}
-          <p>České Budějovice</p>
-        </div>
-
         <div className="contact__row">
           <img className="contact__icon" src={web} alt="Logo web" />
           <a className="link" href="https://slavkavav.cz/">
             https://slavkavav.cz/
           </a>
+        </div>
+        <div className="contact__row contact__row--address">
+          <img className="contact__icon" src={address} alt="Ikona adresy" />{' '}
+          <p>České Budějovice</p>
         </div>
       </div>
       <p className="contact__question">Máte něco na srdci?</p>

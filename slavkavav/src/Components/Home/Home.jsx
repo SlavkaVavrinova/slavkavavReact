@@ -10,44 +10,40 @@ const Home = () => {
       <div className="main">
         <p>Ahoj, jsem Slávka,</p>
         <p>
-          chci tvořit weby a učit se, jak to dělat skvěle.{' '}
+          chci tvořit weby a učím se, jak to dělat skvěle.{' '}
           <strong>
             Hledáš akčního zaměstnance nebo někoho na webovky menšího rozsahu?
           </strong>
         </p>
-        <h2>Kdy můžu pomoct:</h2>
+        <h2>Kdy můžu s webem pomoct:</h2>
         <ul>
-          <li>
-            <strong>Je na to čas</strong>. Ne nebude to za týden.
-          </li>
           <li>
             Potřebuješ <strong>web malého rozsahu</strong>, stránku, pět, víc o
             domluvě. Ne eshop nepůjde, ani malinkej.
           </li>
           <li>
+            <strong>Je na to čas</strong>. Nebude to za týden.
+          </li>
+          <li>
             Nevadí ti, že to nedělám 10 let, nemám 1 000 dokonalých projektů a 1
-            000 000 spokojených zákazníků
+            000 000 spokojených zákazníků.
           </li>
           <li>
-            Máš okouklé weby, které se ti líbí, ale budeme se domlouvat na
-            změnách.
+            Máš nějakou představu, prohlédlé weby, které se ti líbí. Nebudeme je
+            ale kopírovat.
           </li>
           <li>
-            <strong>Dodáš fotky a texty</strong>, které proškrtáme.
-          </li>
-          <li>
-            {' '}
-            <strong>Chceš mě zaměstnat.</strong>{' '}
+            <strong>Dodáš fotky a texty</strong>.
           </li>
         </ul>
-        <p className="contact__question">Ceník?</p>
-        <p className="center">Ten tu není, nejdříve co a pak až za kolik :-)</p>
-
         <div className="button__row">
           <Link to="/kontakt">
             <button className="button">CHCI WEBOVKY</button>
           </Link>
         </div>
+        <h2>Ceník?</h2>
+        <p className="center">Ten tu není, nejdříve co a pak až za kolik :-)</p>
+
         <h2>Co už umím:</h2>
         <ul>
           <li>
@@ -57,9 +53,9 @@ const Home = () => {
 
           <li>
             Používat pokročilé techniky pro tvorbu layoutu stránky (
-            <strong>flexbox</strong> a <strong>CSS grid</strong>)
+            <strong>flexbox</strong> a <strong>CSS grid</strong>).
           </li>
-          <li>Sass, Bootstrap</li>
+          <li>Sass, Bootstrap.</li>
           <li>
             Základy programování v jazyce <strong>JavaScript</strong>.
           </li>
@@ -68,7 +64,7 @@ const Home = () => {
             knihovny <strong>React, Next.js a Node.js</strong>.
           </li>
           <li>
-            Používám verzovací systém Git a{' '}
+            Používat verzovací systém Git a{' '}
             <strong>GitHub, Webpack, npm</strong>.
           </li>
           <li>Základní funkce, podmínky a cykly v jazyce PHP.</li>

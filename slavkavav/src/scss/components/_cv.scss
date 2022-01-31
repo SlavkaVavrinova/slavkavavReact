@@ -24,7 +24,7 @@
 
 .foto {
   width: 60vw;
-  margin: 2.5rem 20vw 1rem 20vw;
+  margin: 5rem 20vw 1rem 20vw;
   border-radius: 5px;
   box-shadow: 5px 5px 5px -2px #582c3e;
 }
@@ -101,10 +101,10 @@
 
 .contact__phoneEmail {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   text-align: center;
-  padding-bottom: 0.5rem;
-  padding-left: 0.5rem;
+  padding: 0.5rem;
 }
 
 .contact__phoneEmail a,
@@ -113,12 +113,14 @@
 .contact__address a {
   display: flex;
   align-items: center;
-  padding: 0 0.5rem;
+  justify-content: center;
+  padding: 0.5rem;
 }
 
 .contact__socialNetworks {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+
   padding-bottom: 0.5rem;
 }
 
@@ -236,6 +238,28 @@
 .copyright {
   height: 1rem;
   padding-right: 1em;
+}
+
+@media (min-width: 500px) {
+  .contact__phoneEmail {
+    flex-direction: row;
+    padding-bottom: 0 0.5rem 0.5rem 0;
+    justify-content: space-around;
+  }
+
+  .contact__phoneEmail a,
+  .contact__socialNetworks a,
+  .contact__address div,
+  .contact__address a {
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.5rem;
+  }
+
+  .contact__socialNetworks {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 @media (min-width: 800px) {
@@ -403,11 +427,24 @@
     width: 35%;
   }
 
+  .contact__phoneEmail {
+    flex-direction: row;
+    padding-bottom: 0 0.5rem 0.5rem 0;
+    justify-content: space-around;
+  }
+
   .contact__phoneEmail a,
   .contact__socialNetworks a,
   .contact__address div,
   .contact__address a {
+    align-items: center;
+    justify-content: center;
     padding: 0;
+  }
+
+  .contact__socialNetworks {
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .contact__phoneEmail,

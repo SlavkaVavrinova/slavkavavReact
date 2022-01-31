@@ -112,7 +112,7 @@ const ComponentToPrint = React.forwardRef((props, ref) => {
                     </a>
                     React
                   </li>
-                  <li>
+                  {/* <li>
                     <a
                       className="cv__link"
                       href="https://budejcanda.cz"
@@ -121,7 +121,7 @@ const ComponentToPrint = React.forwardRef((props, ref) => {
                       https://budejcanda.cz
                     </a>
                     Next.js
-                  </li>
+                  </li>*/}
                   <li>
                     <a
                       className="cv__link"
@@ -282,7 +282,7 @@ const ComponentToPrint = React.forwardRef((props, ref) => {
               <section class="education">
                 <h2 className="cv__h2">Vzdělání</h2>
                 <h3 className="cv__h3">
-                  Jihočeská univerzita, Ekonomická fakulta | 2005 - 2010
+                  Jihočeská uni., Ekonomická fakulta | 2005 - 2010
                 </h3>
                 <ul className="cv__list">
                   <li>Studijní program Ekonomika a management, titul Ing.</li>
