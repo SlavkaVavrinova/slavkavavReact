@@ -70,7 +70,9 @@ const ContactForm = () => {
           Jméno<span className="required">*</span>
         </label>
         <input
-          className="form__input"
+          className={`form__input `} /*${
+            nameMessageValid ? 'validBorder' : 'invalidBorder'
+          }*/
           value={name}
           onChange={(event) => setName(event.target.value)}
           type="text"
@@ -121,7 +123,7 @@ const ContactForm = () => {
           name="message"
           id="message"
           cols="20"
-          maxlength="2000"
+          maxLength="2000"
         ></textarea>
         <div className="infoField">{validMessage}</div>
       </div>

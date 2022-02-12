@@ -46,7 +46,7 @@
     padding: root.$spacer;
 
     @include mixins.special(800px) {
-      padding: 0 0 0 root.$spacer;
+      padding: 0 root.$spacer 0 root.$spacer;
       text-align: left;
     }
   }
@@ -58,5 +58,21 @@
 
   &__title {
     margin-top: 0;
+  }
+}
+
+.prototypNo {
+  display: none;
+}
+
+.prototypDisplay {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 1em;
+  @include mixins.special(800px) {
+    display: inline-block;
+    width: auto;
+    margin: 0 1em 1em 0;
   }
 }

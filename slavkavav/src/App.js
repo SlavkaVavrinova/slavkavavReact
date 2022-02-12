@@ -12,6 +12,10 @@ import Contact from './Components/Contact/Contact';
 import Cv from './Components/Cv/Cv';
 import Footer from './Components/Footer/Footer';
 
+import ReactGA from 'react-ga';
+ReactGA.initialize('G-CLTPW2WX1R');
+ReactGA.pageview(window.location.pathname + window.location.search);
+
 const App = () => {
   return (
     <BrowserRouter>

@@ -23,6 +23,16 @@ const Portfolio = () => (
           <p className="item__id">{web.id}</p>
           <h3 className="item__title">{web.name}</h3>
           <p>{web.info}</p>
+          <a
+            className={web.prototypDisplay}
+            href={web.prototypHref}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button className="button button--targetBlank button--secondary">
+              Prototyp
+            </button>
+          </a>
           <a href={web.href} target="_blank" rel="noreferrer">
             <button className="button button--targetBlank">
               Prohlédnout web
@@ -35,14 +45,16 @@ const Portfolio = () => (
 );
 
 const webs = [
-  /* {
-    id: '06',
+  {
+    id: '07',
     img: `${budejcanda}`,
     alt: 'Web Budějčanda',
     name: 'Budějčanda',
-    info: 'Next.js, Frontendová část webu',
-    href: 'https:/budejcanda.cz/'
-  },*/
+    info: 'Next.js - Veliké děkuji Standovi Kosáčkovi z Czechitas za rady, pomoc a hlavně souhlas, že to dáme. Jeho zásluha je celý backend.',
+    href: 'https:/budejcanda.cz/',
+    prototypDisplay: 'prototypNo',
+    prototypHref: '',
+  },
   {
     id: '06',
     img: `${slavkaVav}`,
@@ -50,6 +62,8 @@ const webs = [
     name: 'SlavkaVav',
     info: 'React,Sass',
     href: 'https://www.slavkavav.cz/',
+    prototypDisplay: 'prototypNo',
+    prototypHref: '',
   },
   {
     id: '05',
@@ -58,32 +72,40 @@ const webs = [
     name: 'Pension Gerta',
     info: 'Statický web se šablonou Eleventy',
     href: 'https://www.gerta.cz/',
+    prototypDisplay: 'prototypDisplay',
+    prototypHref:
+      'https://xd.adobe.com/view/29edc6e2-15be-4421-82b5-1db34a6144fd-7cbe/',
   },
   {
     id: '04',
-    img: `${appkaHyposka}`,
-    alt: 'Web Appka Hypoška',
-    name: 'Appka Hypoška',
-    info: 'React, závěrečný projekt Digitální akademie',
-    href: 'https://appkahyposka.cz/',
-  },
-  {
-    id: '03',
     img: `${statek}`,
     alt: 'Web Statek Chlumeček',
     name: 'Statek Chlumeček',
     info: 'WordPress',
     href: 'https://www.statekchlumecek.cz/',
+    prototypDisplay: 'prototypNo',
+    prototypHref: '',
   },
   {
-    id: '02',
+    id: '03',
     img: `${chataRuzenka}`,
     alt: 'Web Chata Růženka',
     name: 'Chata Růženka',
     info: 'WordPress',
     href: 'http://www.chataruzenka.cz/',
+    prototypDisplay: 'prototypNo',
+    prototypHref: '',
   },
-
+  {
+    id: '02',
+    img: `${appkaHyposka}`,
+    alt: 'Web Appka Hypoška',
+    name: 'Appka Hypoška',
+    info: 'React, závěrečný projekt Digitální akademie',
+    href: 'https://appkahyposka.cz/',
+    prototypDisplay: 'prototypNo',
+    prototypHref: '',
+  },
   {
     id: '01',
     img: `${chataGerta}`,
@@ -91,6 +113,8 @@ const webs = [
     name: 'Chata Gerta',
     info: 'Web se předělává',
     href: 'http://www.chatagerta.cz/',
+    prototypDisplay: 'prototypNo',
+    prototypHref: '',
   },
 ];
 

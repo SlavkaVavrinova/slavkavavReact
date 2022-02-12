@@ -9,7 +9,7 @@ import github from './img/github.svg';
 import uxUi from './img/uxUi.svg';
 import figma from './img/figma.svg';
 import photoshop from './img/photoshop.svg';
-import inkscape from './img/inkscape.svg';
+import php from './img/php.svg';
 import canva from './img/canva2.svg';
 import wordpress from './img/wordpress.svg';
 
@@ -78,9 +78,9 @@ const skillsItems = [
   },
 
   {
-    icon: `${inkscape}`,
-    alt: 'Ikona Inkscape',
-    name: 'Inkscape',
+    icon: `${php}`,
+    alt: 'Ikona PHP',
+    name: 'PHP',
   },
 
   {

@@ -196,7 +196,8 @@
   vertical-align: middle;
   display: inline-block;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: colors.$primary;
     background-color: colors.$primaryLight;
   }
@@ -208,7 +209,8 @@
     padding: 0 calc(root.$spacer / 2);
     color: colors.$primary;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: colors.$primaryLight;
     }
 

@@ -16,8 +16,8 @@ const Contact = () => {
       <div className="center contact__socialIcons--center">
         <div className="contact__row">
           <img className="contact__icon" src={email} alt="Ikona email" />
-          <a className="link" href="malito:vavrinovas@gmail.com">
-            vavrinovas@gmail.com
+          <a className="link" href="malito:slavka.vav@gmail.com">
+            slavka.vav@gmail.com
           </a>
         </div>
         <div className="contact__row">
@@ -26,7 +26,7 @@ const Contact = () => {
             https://slavkavav.cz/
           </a>
         </div>
-        <div className="contact__row contact__row--address">
+        <div className="contact__row ">
           <img className="contact__icon" src={address} alt="Ikona adresy" />{' '}
           <p>České Budějovice</p>
         </div>
@@ -54,7 +54,7 @@ const Contact = () => {
         <a className="link" href="mailto:slavka.vav@gmail.com">
           e-mail
         </a>{' '}
-        či zanechte vzkaz.
+        či zanechte vzkaz:
       </p>
 
       <ContactForm />

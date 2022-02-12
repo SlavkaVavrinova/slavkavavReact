@@ -5,13 +5,21 @@
 .button {
   text-transform: uppercase;
   background-color: colors.$primary;
-  border: none;
+  border: colors.$primary solid 1px;
   color: colors.$light;
   font-weight: 600;
   padding: 0.7rem 1.4rem;
   box-shadow: 3px 3px 5px rgb(0 0 0 / 10%), 0 15px 35px 0 rgb(0 0 0 / 10%);
   display: inline-block;
 
+  &--secondary {
+    background-color: colors.$primaryLight;
+    color: colors.$primary;
+    border: colors.$primary solid 1px;
+    margin: -3px;
+    text-decoration: none;
+    font-weight: 600;
+  }
   &__row {
     text-align: center;
   }
@@ -19,7 +27,8 @@
   cursor: pointer;
   transition: background-color 0.3s;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: #7b4a5e;
   }
   &:active {
@@ -32,11 +41,6 @@
     text-decoration: none;
     font-weight: 600;
 
-    &--secondary {
-      color: colors.$secondary;
-      text-decoration: none;
-      font-weight: 600;
-    }
     &--form {
       margin-left: auto;
       margin-right: auto;

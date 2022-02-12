@@ -1,6 +1,5 @@
 import ReactToPrint from 'react-to-print';
 import React, { useRef } from 'react';
-import { Link } from 'react-router-dom';
 
 import ComponentToPrint from './ComponentToPrint';
 

@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <>
       <div className="main">
-        <p>Ahoj, jsem Slávka,</p>
+        <p>Ahoj jsem Slávka,</p>
         <p>
           chci tvořit weby a učím se, jak to dělat skvěle.{' '}
           <strong>
@@ -18,8 +18,8 @@ const Home = () => {
         <h2>Kdy můžu s webem pomoct:</h2>
         <ul>
           <li>
-            Potřebuješ <strong>web malého rozsahu</strong>, stránku, pět, víc o
-            domluvě. Ne eshop nepůjde, ani malinkej.
+            <strong>Web malého rozsahu</strong>, stránku, pět, víc o domluvě
+            (eshop nepůjde, ani malinkej).
           </li>
           <li>
             <strong>Je na to čas</strong>. Nebude to za týden.
@@ -29,8 +29,8 @@ const Home = () => {
             000 000 spokojených zákazníků.
           </li>
           <li>
-            Máš nějakou představu, prohlédlé weby, které se ti líbí. Nebudeme je
-            ale kopírovat.
+            Máš představu, prohlédlé weby, které se ti líbí. Nebudeme ale
+            kopírovat.
           </li>
           <li>
             <strong>Dodáš fotky a texty</strong>.

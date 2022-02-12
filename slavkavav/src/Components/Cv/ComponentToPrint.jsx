@@ -24,25 +24,21 @@ const ComponentToPrint = React.forwardRef((props, ref) => {
 
             <ul class="contact">
               <li class="contact__phoneEmail">
-                <a className="cv__link" href="tel:+420775959988">
-                  <img src={phone} alt="Ikona telefon" />
-                  +420 775 959 988
+                <a className="cv__link" href="https://slavkavav.cz/">
+                  <img src={web} alt="Logo web" />
+                  https://slavkavav.cz/
                 </a>
-                <a className="cv__link" href="malito:vavrinovas@gmail.com">
+                <a className="cv__link" href="malito:slavka.vav@gmail.com">
                   <img src={email} alt="Ikona email" />
-                  vavrinovas@gmail.com
+                  slavka.vav@gmail.com
                 </a>
               </li>
 
               <li class="contact__address">
                 <div>
-                  <img src={address} alt="Ikona adresy" /> České Budějovices
+                  <img src={address} alt="Ikona adresy" /> Nové Homole u Českých
+                  Budějovic
                 </div>
-
-                <a className="cv__link" href="https://slavkavav.cz/">
-                  <img src={web} alt="Logo web" />
-                  https://slavkavav.cz/
-                </a>
               </li>
 
               <li class="contact__socialNetworks">
@@ -227,7 +223,7 @@ const ComponentToPrint = React.forwardRef((props, ref) => {
                 <ul className="cv__list">
                   <li>Beginner JavaScript</li>
                   <li>ES6 for Everyone</li>
-                  <li>React For Beginners</li>
+                  <li>React for Beginners</li>
                   <li>Začínám: Advanced React and GraphQL</li>
                 </ul>
               </section>

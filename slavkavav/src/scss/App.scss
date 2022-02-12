@@ -109,7 +109,8 @@ h3 {
     height: 3px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: linear-gradient(
       120deg,
       colors.$primaryLight 0%,
