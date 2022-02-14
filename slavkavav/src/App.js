@@ -11,7 +11,6 @@ import Contact from './Components/Contact/Contact';
 
 import Cv from './Components/Cv/Cv';
 import Footer from './Components/Footer/Footer';
-import Ux from './Components/Ux/Ux';
 
 import ReactGA from 'react-ga';
 ReactGA.initialize('G-CLTPW2WX1R');
@@ -29,7 +28,6 @@ const App = () => {
           <Route path="/zivotopis" element={<Cv />} />
           <Route path="/koucovani" element={<Coaching />} />
           <Route path="/kontakt" element={<Contact />} />
-          <Route path="/ux" element={<Ux />} />
         </Routes>
         <Footer />
       </div>

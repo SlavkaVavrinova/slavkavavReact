@@ -1,7 +1,6 @@
 import React from 'react';
 
 import slavka from './img/stanislavaVavrinova.jpg';
-import phone from './img/phone.svg';
 import email from './img/email.svg';
 import address from './img/address.svg';
 import web from './img/web.svg';
@@ -88,7 +87,7 @@ const ComponentToPrint = React.forwardRef((props, ref) => {
                   <li>HTML/CSS</li>
                   <li>JavaScript</li>
                   <li>React, Next.js</li>
-                  <li>PHP (okrajově)</li>
+                  <li>PHP</li>
                   <li>UX Design</li>
                   <li>WordPress</li>
                   <li>Bootstrap, SASS</li>
@@ -108,7 +107,7 @@ const ComponentToPrint = React.forwardRef((props, ref) => {
                     </a>
                     React
                   </li>
-                  {/* <li>
+                  <li>
                     <a
                       className="cv__link"
                       href="https://budejcanda.cz"
@@ -117,7 +116,7 @@ const ComponentToPrint = React.forwardRef((props, ref) => {
                       https://budejcanda.cz
                     </a>
                     Next.js
-                  </li>*/}
+                  </li>
                   <li>
                     <a
                       className="cv__link"

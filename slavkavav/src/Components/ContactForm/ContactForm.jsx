@@ -5,33 +5,72 @@ import validator from 'validator';
 import { db } from '../../db';
 
 const ContactForm = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
   const [response, setResponse] = useState('');
   const [error, setError] = useState('');
 
-  const [nameMessageValid, setNameMessageValid] = useState(true);
+  /* Validation name */
+  const [name, setName] = useState('');
+  const [nameNoticeValid, setNameNoticeValid] = useState(true);
+  const [nameStatus, setNameStatus] = useState(true);
 
-  const validName = nameMessageValid !== true ? 'Chybí vyplnit jméno' : '';
+  const validName = nameNoticeValid !== true ? 'Chybí vyplnit jméno' : '';
   useEffect(() => {
-    setNameMessageValid(name.length > 2);
+    setNameNoticeValid(name.length > 2);
   }, [name]);
 
-  const [emailMessageValid, setemailMessageValid] = useState(true);
-  const validEmail = emailMessageValid !== true ? 'Zatejte platný email' : '';
+  const handleNameChange = (event) => {
+    setNameStatus(false);
+    setName(event.target.value);
+  };
+
+  let nameClassses = 'form__input ';
+  if (!nameStatus) {
+    nameClassses += nameNoticeValid ? 'validBorder' : 'invalidBorder';
+  }
+
+  /* Validation email */
+  const [email, setEmail] = useState('');
+  const [emailNoticeValid, setEmailNoticeValid] = useState(true);
+  const [emailStatus, setEmailStatus] = useState(true);
+
+  const validEmail = emailNoticeValid !== true ? 'Zatejte platný email' : '';
   useEffect(() => {
-    setemailMessageValid(validator.isEmail(email));
+    setEmailNoticeValid(validator.isEmail(email));
   }, [email]);
 
-  const [messageMessageValid, setMessageMessageValid] = useState(true);
-  const validMessage =
-    messageMessageValid !== true ? 'Chybí vyplnit zprávu' : '';
+  const handleEmailChange = (event) => {
+    setEmailStatus(false);
+    setEmail(event.target.value.trim());
+  };
 
+  let emailClassses = 'form__input ';
+  if (!emailStatus) {
+    emailClassses += emailNoticeValid ? 'validBorder' : 'invalidBorder';
+  }
+
+  /* Subject */
+  const [subject, setSubject] = useState('');
+
+  /* Validation message */
+  const [message, setMessage] = useState('');
+  const [messageNoticeValid, setMessageNoticeValid] = useState(true);
+  const [messageStatus, setMessageStatus] = useState(true);
+
+  const validMessage =
+    messageNoticeValid !== true ? 'Chybí vyplnit zprávu' : '';
   useEffect(() => {
-    setMessageMessageValid(message.length > 2);
+    setMessageNoticeValid(message.length > 2);
   }, [message]);
+
+  const handleMessageChange = (event) => {
+    setMessageStatus(false);
+    setMessage(event.target.value);
+  };
+
+  let messageClassses = 'form__textarea ';
+  if (!messageStatus) {
+    messageClassses += messageNoticeValid ? 'validBorder' : 'invalidBorder';
+  }
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -53,6 +92,9 @@ const ContactForm = () => {
         setEmail('');
         setSubject('');
         setMessage('');
+        setNameStatus(true);
+        setEmailStatus(true);
+        setMessageStatus(true);
         setError('');
       } catch (err) {
         setResponse(`Jejda, něco se nepovedlo. Zadej znovu.`);
@@ -70,11 +112,9 @@ const ContactForm = () => {
           Jméno<span className="required">*</span>
         </label>
         <input
-          className={`form__input `} /*${
-            nameMessageValid ? 'validBorder' : 'invalidBorder'
-          }*/
+          className={nameClassses}
           value={name}
-          onChange={(event) => setName(event.target.value)}
+          onChange={handleNameChange}
           type="text"
           name="name"
           id="name"
@@ -87,9 +127,9 @@ const ContactForm = () => {
           E-mail <span className="required">*</span>
         </label>
         <input
-          className="form__input"
+          className={emailClassses}
           value={email}
-          onChange={(event) => setEmail(event.target.value.trim())}
+          onChange={handleEmailChange}
           type="email"
           name="email"
           id="email"
@@ -116,9 +156,9 @@ const ContactForm = () => {
           Zpráva<span className="required">*</span>
         </label>
         <textarea
-          className="form__textarea"
+          className={messageClassses}
           value={message}
-          onChange={(event) => setMessage(event.target.value)}
+          onChange={handleMessageChange}
           rows={5}
           name="message"
           id="message"
